@@ -41,8 +41,12 @@ import Userbuy from './views/Authentication/Userbuy.vue';
 import Usersell from './views/Authentication/Usersell.vue';
 import Tradebuy from './views/Trade/Tradebuy.vue';
 import Tradesell from './views/Trade/Tradesell.vue';
+import GetTrade from './views/Authentication/GetTrade.vue';
 import Buynsell from './views/Trade/Buynsell.vue';
 import PropBuy from './views/Authentication/PropBuy.vue';
+import tradeWithUs from './views/Trade/tradeWithUs.vue';
+import Comingsoon from './views/Estate_league/Comingsoon.vue';
+import Training from './views/Our_interest/Training.vue';
 
 
 
@@ -50,7 +54,7 @@ import PropBuy from './views/Authentication/PropBuy.vue';
 Vue.use(Router);
 
 export default new Router({
-  
+
   routes: [
     {
       path: '/',
@@ -83,7 +87,7 @@ export default new Router({
       }
     },
     {
-      path: '/resetpassword',
+      path: '/resetpassword/:token',
       name: 'resetpassword',
       component:ResetPassword,
     },
@@ -120,6 +124,11 @@ export default new Router({
       path: '/properties',
       name: 'properties',
       component: Properties,
+    },
+    {
+        path: '/training',
+        name: 'training',
+        component: Training,
     },
     {
       path: '/overview',
@@ -272,6 +281,11 @@ export default new Router({
       component: Tradesell,
     },
     {
+        path: '/trading',
+        name: 'trading',
+        component:GetTrade,
+    },
+    {
       path: '/tradebuy',
       name: 'tradebuy',
       component: Tradebuy,
@@ -285,6 +299,16 @@ export default new Router({
       path: '/propbuy',
       name: 'propbuy',
       component: PropBuy,
+    },
+    {
+        path: '/tradewithus',
+        name: 'tradeWithUs',
+        component: tradeWithUs,
+    },
+    {
+        path: '/comingsoon',
+        name: 'comingsoon',
+        component: Comingsoon,
     },
     
   ],

@@ -194,7 +194,7 @@
 import Navbar from '../Navbar.vue';
 import Footer from '../Footer.vue';
 
-const API_URL = 'http://localhost:3000/api/v1/users';
+import { leagueSell } from '../../config';
 
 export default{
   name: 'reg',
@@ -216,7 +216,7 @@ export default{
 
   }),
   mounted: () => {
-    fetch(API_URL).then(response => response.json()).then((result) => {
+    fetch(leagueSell).then(response => response.json()).then((result) => {
       this.reg = result;
     });
   },

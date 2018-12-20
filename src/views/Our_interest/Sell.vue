@@ -102,7 +102,7 @@
 import Navbar from '../Navbar.vue';
 import Footer from '../Footer.vue';
 
-const API_URL = 'http://localhost:3000/api/v1/property';
+import { propertySell } from '../../config';
 
 export default{
   name: '',
@@ -125,7 +125,7 @@ export default{
   },
 
   mounted: () => {
-    fetch(API_URL).then(response => response.json()).then((result) => {
+    fetch(propertySell).then(response => response.json()).then((result) => {
       this.sell = result;
     });
   },

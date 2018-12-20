@@ -43,7 +43,7 @@
                             </li>
 
 
-                            </li>
+
                             <li>
                                 <a href="/#/bizclub" class="waves-effect"><i class="mdi mdi-map-marker-multiple"></i><span>BIZ CLUB</span></a>
                             </li>
@@ -64,6 +64,9 @@
                             </li>
                             <li>
                                 <a href="/#/clients" class="waves-effect"><i class="mdi mdi-clipboard-outline"></i><span>Our Clients</span></a>
+                            </li>
+                            <li>
+                                <a href="/#/trading" class="waves-effect"><i class="mdi mdi-clipboard-outline"></i><span>Trade</span></a>
                             </li>
 
 

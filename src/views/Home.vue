@@ -11,7 +11,7 @@
 					<p>A marketing outfit with ultimate bias for real estate and investment opportunities.</p>
 					<ul>
 
-						<li><a href="">Contact Us</a></li>
+						<li><a href="/#/estatedev2">Trade with us</a></li>
 					</ul>
 				</div>
 			</div>
@@ -21,7 +21,7 @@
 					<h1>Welcome To T.E.A.M LTD</h1>
 					<p>A marketing outfit with ultimate bias for real estate and investment opportunities.</p>
 					<ul>
-						<li><a href="/contact">Contact Us</a></li>
+						<li><a href="/#/estatedev2">Trade with Us</a></li>
 					</ul>
 				</div>
 			</div>
@@ -37,14 +37,26 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="sec-title">
-						<h1>Our<span>Service</span></h1>
+						<h1>What<span>We Do</span></h1>
 						<div class="border-shape"></div>
 						<p></p>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 col-sm-4 inner">
+				<div class="col-md-3 col-sm-3 inner">
+					<div class="media">
+						<div class="icon">
+							<i class="fa fa-home"></i>
+						</div>
+						<div class="media-body">
+							<h2></h2>
+							<p>TRAINING</p>
+							<a href="service-details.html" class="btn morebutton">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-3 inner">
 					<div class="media">
 						<div class="icon">
 							<i class="fa fa-home"></i>
@@ -56,7 +68,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-4 inner">
+				<div class="col-md-3 col-sm-3 inner">
 					<div class="media">
 						<div class="icon">
 							<i class="fa fa-mortar-board"></i>
@@ -68,7 +80,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-4 inner">
+				<div class="col-md-3 col-sm-3 inner">
 					<div class="media">
 						<div class="icon">
 							<i class="fa fa-users"></i>
@@ -463,7 +475,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="sec-title">
-						<h1>Our<span>Influencers</span></h1>
+						<h1>Property<span>Developers</span></h1>
 						<div class="border-shape"></div>
 						<p></p>
 					</div>

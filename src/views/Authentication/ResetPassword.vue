@@ -4,6 +4,12 @@
 		<div >
 			<div class="modal-dialog modal-sm">
 				<div class="modal-content login-modal">
+					<div class="row">
+						<div class="alert alert-success" v-if="submitted">
+							<button class="close" type="button" data-dismiss="alert" aria-hidden="true">&#215;</button>
+							a mail has been sent to your mail
+						</div>
+					</div>
 					<center><span style="font-size: 30px;">ENTER YOUR NEW  PASSWORD</span></center>
 						<br>
 					<div class="modal-header">
@@ -40,6 +46,7 @@ export default{
     return {
       password: '',
       confirmPassword: '',
+		submitted:false
     };
   },
   methods: {
@@ -51,7 +58,8 @@ export default{
       };
       this.$http.post(resetpassword, postData).then((response) => {
         console.log('response', response);
-        this.$router.push({ name: 'home' });
+        this.submitted= true;
+       /* this.$router.push({ name: 'home' });*/
       }).catch((response) => {
         console.log('response', response);
       });

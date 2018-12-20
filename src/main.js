@@ -13,6 +13,7 @@ Vue.use(VueResource);
 
 sync(store, router)
 
+
 new Vue({
   router,
   store,

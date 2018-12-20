@@ -92,7 +92,7 @@
 import AdminSidebar from './AdminSidebar.vue';
 import Topbar from './Topbar.vue';
 
-const API_URL = 'http://localhost:3000/api/v1/users';
+import { userRole } from '../../config';
 
 export default{
   name: 'role',

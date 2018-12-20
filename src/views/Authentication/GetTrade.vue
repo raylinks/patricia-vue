@@ -1,9 +1,9 @@
 <template>
-<div>
-<div id="wrapper">
+    <div>
+        <div id="wrapper">
 
             <!-- ========== Left Sidebar Start ========== -->
-             <side-bar></side-bar>
+            <side-bar></side-bar>
             <!-- Left Sidebar End -->
 
             <!-- Start right Content here -->
@@ -46,22 +46,22 @@
 
                                             <table class="table" id="my-table">
                                                 <thead>
-                                                  <tr>
+                                                <tr>
                                                     <th>No</th>
                                                     <th>Fullname</th>
                                                     <th>Email</th>
                                                     <th>Description</th>
                                                     <th>Action</th>
-                                                  </tr>
+                                                </tr>
                                                 </thead>
                                                 <tbody>
-                                                  <tr v-for="cat in show">
-                                                      <td>1</td>
-                                                      <td>{{cat.fullname}}</td>
-                                                      <td>{{cat.email}}</td>
-                                                      <td>{{cat.description}}</td>
-                                                      <td><button type="button" class="btn btn-info">Delete</button></td>
-                                                  </tr>
+                                                <tr v-for="cat in show">
+                                                    <td>1</td>
+                                                    <td>{{cat.fullname}}</td>
+                                                    <td>{{cat.email}}</td>
+                                                    <td>{{cat.description}}</td>
+                                                    <td><button type="button" class="btn btn-info">Delete</button></td>
+                                                </tr>
 
                                                 </tbody>
                                             </table>
@@ -83,7 +83,7 @@
                                                 <thead>
                                                 <tr>
                                                     <th>No</th>
-                                                   <th>Fullname</th>
+                                                    <th>Fullname</th>
                                                     <th>Email</th>
                                                     <th>Description</th>
                                                     <th>Action</th>
@@ -114,51 +114,51 @@
 
                 </div> <!-- content -->
 
-               <!--  <footer class="footer">
-                    © 2018 Annex by Mannatthemes.
-                </footer> -->
+                <!--  <footer class="footer">
+                     © 2018 Annex by Mannatthemes.
+                 </footer> -->
 
             </div>
             <!-- End Right content here -->
 
         </div>
-</div>
+    </div>
 </template>
 <script>
-import AdminSidebar from './AdminSidebar.vue';
-import Topbar from './Topbar.vue';
+    import AdminSidebar from './AdminSidebar.vue';
+    import Topbar from './Topbar.vue';
 
-import { propbuy } from '../../config';
+    import { propbuy } from '../../config';
 
-export default{
-  data() {
-    return {
-      property: {
-        fullname: '',
-        email: '',
-        description: '',
-      },
-      show: {},
+    export default{
+        data() {
+            return {
+                property: {
+                    fullname: '',
+                    email: '',
+                    description: '',
+                },
+                show: {},
+            };
+        },
+
+        components: {
+            'side-bar': AdminSidebar,
+            'top-bar': Topbar,
+        },
+        created() {
+            this.getProp();
+        },
+        methods: {
+            getProp() {
+                this.$http.get(propbuy)
+                    .then(function (response) {
+                        this.show = response.body.data;
+                        this.property = '';
+                    });
+            },
+        },
+
+
     };
-  },
-
-  components: {
-    'side-bar': AdminSidebar,
-    'top-bar': Topbar,
-  },
-  created() {
-    this.getProp();
-  },
-  methods: {
-    getProp() {
-      this.$http.get(propbuy)
-        .then(function (response) {
-          this.show = response.body.data;
-          this.property = '';
-        });
-    },
-  },
-
-
-};
 </script>

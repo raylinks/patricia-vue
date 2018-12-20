@@ -93,7 +93,7 @@
 import AdminSidebar from './AdminSidebar.vue';
 import Topbar from './Topbar.vue';
 
-const API_URL = 'http://localhost:3000/api/v1/users';
+import { clients } from '../../config';
 
 export default{
   data() {
@@ -115,7 +115,7 @@ export default{
   },
   methods: {
     getClient() {
-      this.$http.get('http://localhost:3000/api/v1/users').then(function (response) {
+      this.$http.get(clients).then(function (response) {
         this.show = response.body.data;
         // console.log(response);
         // this.client= ''

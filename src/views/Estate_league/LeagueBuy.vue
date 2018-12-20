@@ -168,7 +168,8 @@
 import Navbar from '../Navbar.vue';
 import Footer from '../Footer.vue';
 
-const API_URL = 'http://localhost:3000/api/v1/users';
+
+import { leagueBuy } from '../../config';
 
 export default{
   name: 'leaguebuy',
@@ -205,7 +206,7 @@ export default{
   methods: {
 		   submit() {
 		   	console.log(this.reg);
-		   	fetch(API_URL, {
+		   	fetch(leagueBuy, {
 		 		method: 'POST',
 		   		body: JSON.stringify(this.reg),
 		   		headers: {

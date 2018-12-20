@@ -67,6 +67,8 @@ import axios from 'axios';
 import router from 'router';
 import EventBus from './EventBus';
 
+import { login } from '../../config';
+
 export default{
   data() {
     return {
@@ -77,7 +79,7 @@ export default{
 
   methods: {
     login() {
-      axios.post('http://localhost:3000/api/v1/users/login', {
+      axios.post(login, {
         email: this.email,
         password: this.password,
       }).then((res) => {

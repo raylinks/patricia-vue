@@ -87,7 +87,7 @@
 import Navbar from '../Navbar.vue';
 import Footer from '../Footer.vue';
 
-// const API_URL = 'http://localhost:3000/api/v1/users/create';
+import { leagueBuy2 } from '../../config';
 
 export default{
 
@@ -132,7 +132,7 @@ export default{
     //    	});
     // }
     submit() {
-      this.$http.post('http://localhost:3000/api/users/create', this.reg).then(function (response) {
+      this.$http.post('leagueBuy2', this.reg).then(function (response) {
         this.submitted = true;
         this.reg = '';
       });

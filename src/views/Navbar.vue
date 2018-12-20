@@ -36,7 +36,7 @@
       <div class="row">
          <div class="col-md-2">
            <div class="logo">
-            <a href=""><img src="front/teamlogo.jpg" alt=""/></a>
+            <a href=""><img src="img/newlogo.jpg" alt=""/></a>
           </div>
         </div>
         <div class="col-md-10">
@@ -44,34 +44,37 @@
             <nav id="main-menu" class="main-menu">
               <ul>
                 <li class="active"><a href="/">Home</a></li>
-                <li><a href="">Our Interests<i class="fa fa-caret-down"></i></a>
+                <li><a href="">What we do<i class="fa fa-caret-down"></i></a>
                     <ul>
                     <li><a href="/#/estatedev2">Estate development</a></li>
                     <li><a href="/#/archline">ArchLine</a></li>
                     <li><a href="/#/properties">Properties</a></li>
+                        <li><a href="/#/training">Training</a></li>
 
                   </ul>
                 </li>
-                <li><a href="">Business Club<i class="fa fa-caret-down"></i></a>
+                <!--<li><a href="">Business Club<i class="fa fa-caret-down"></i></a>
                   <ul>
                     <li><a href="/#/overview">Overview</a></li>
                     <li><a href="/#/dates">Important Dates</a></li>
                   </ul>
-                </li>
-                <li><a href="">Estate League<i class="fa fa-caret-down"></i></a>
-                  <ul>
+                </li>-->
+                <li><a href="/#/comingsoon">Estate League<i class="fa fa-caret-down"></i></a>
+                  <!--<ul>
                     <li><a href="/#/enterleague">Enter League</a></li>
 
-                  </ul>
+                  </ul>-->
                 </li>
-                <li><a href="">Site Inspection</a>
+                <li><a href="">Inspect Site</a>
                     <ul>
+                        <li><a href="/#/">Videos /images</a></li>
+
                     <li><a href="/#/generalinspection">General Inspection</a></li>
                     <li><a href="/#/privateinspection">Private Inspection</a></li>
                   </ul>
                 </li>
 
-                <li><a href="/#/contact">Contact Us</a></li>
+                <li><a href="/#/contact">Find Us</a></li>
               </ul>
             </nav>
           </div>

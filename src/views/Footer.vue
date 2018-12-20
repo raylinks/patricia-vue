@@ -20,7 +20,7 @@
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="footer-wedget-two">
-							<h2>Support links</h2>
+							<h2>Reach US</h2>
 							<ul>
 								<li><a href="index-2.html">Home</a></li>
 								<li><a href="contact.html">Our interest</a></li>
@@ -66,7 +66,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="copy-right">
-							<p>&copy; 2018 All Right Reserved.</p>
+							<p>&copy;  T.e.a.m Limited 2018 All Right Reserved.</p>
 						</div>
 					</div>
 				</div>

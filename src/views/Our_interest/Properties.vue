@@ -38,8 +38,20 @@
 							<!-- <p><span>Bedroom: 3</span><span>Bathroom: 4</span><span>Sq Ft: 1500</span></p> -->
 							<p><b>What is your current property need, lets help you meet it. Acquire or Sell</b> </p>
 							<p>Contact properties@teamltd.org</p>
+							<br>
+							<div>
 							<a href="/#/buy" class="booking-button">BUY</a>
-						</hr>
+							</div>
+
+
+						</div>
+						<div class="room-info">
+							<h2><a href="#"></a></h2>
+
+							<!-- <p><span>Bedroom: 3</span><span>Bathroom: 4</span><span>Sq Ft: 1500</span></p> -->
+
+							<br>
+
 							<div>
 								<a href="/#/sell" class="booking-button">SELL</a>
 							</div>

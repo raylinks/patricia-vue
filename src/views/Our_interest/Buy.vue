@@ -100,7 +100,8 @@
 import Navbar from '../Navbar.vue';
 import Footer from '../Footer.vue';
 
-const API_URL = 'http://localhost:3000/api/v1/property';
+
+import { propertyBuy } from '../../config';
 
 export default{
   name: '',
@@ -123,7 +124,7 @@ export default{
   },
 
   mounted: () => {
-    fetch(API_URL).then(response => response.json()).then((result) => {
+    fetch(propertyBuy).then(response => response.json()).then((result) => {
       this.reg = result;
     });
   },

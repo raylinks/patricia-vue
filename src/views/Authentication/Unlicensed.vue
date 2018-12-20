@@ -91,6 +91,7 @@
 <script>
 import AdminSidebar from './AdminSidebar.vue';
 import Topbar from './Topbar.vue';
+import { unLicensed } from '../../config';
 
 export default{
   data() {
@@ -113,7 +114,7 @@ export default{
   },
   methods: {
     	submit() {
-    		this.$http.post('http://localhost:3000/api/v1/paid', this.users).then(function (response) {
+    		this.$http.post(unLicensed, this.users).then(function (response) {
     			this.users;
     		});
     	},

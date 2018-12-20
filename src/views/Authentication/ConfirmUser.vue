@@ -92,7 +92,7 @@
 import AdminSidebar from './AdminSidebar.vue';
 import Topbar from './Topbar.vue';
 
-const API_URL = 'http://localhost:3000/api/v1/users';
+import { confirmUser } from '../../config';
 
 export default{
   name: 'confirm',
@@ -100,7 +100,7 @@ export default{
     messages: [],
   }),
   mounted() {
-    fetch(API_URL).then(response => response.json()).then((result) => {
+    fetch(confirmUser).then(response => response.json()).then((result) => {
       // console.log(result);
       this.messages = result.data;
     });
