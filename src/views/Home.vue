@@ -52,7 +52,7 @@
 						<div class="media-body">
 							<h2></h2>
 							<p>TRAINING</p>
-							<a href="service-details.html" class="btn morebutton">Read More</a>
+							<a href="service-details.html" class="btn morebutton">Read More...</a>
 						</div>
 					</div>
 				</div>
@@ -295,7 +295,7 @@
 					<div class="sec-title">
 						<h1>Our<span>Gallery</span></h1>
 						<div class="border-shape"></div>
-						<p>Lorem ipsum dolor sit amet, pellentesque enim lorem quis vivamus amet.</p>
+						<p>.....</p>
 					</div>
 				</div>
 			</div>
@@ -372,7 +372,7 @@
 						<img src="" alt="" />
 						<div class="project-hoverlay">
 							<div class="project-text">
-								<a class="gallery-photo" href="img/p7.jpg"><i class="fa fa-arrows-alt"></i></a>
+								<a class="gallery-photo" href=""><i class="fa fa-arrows-alt"></i></a>
 								<h3>Photo 7</h3>
 							</div>
 						</div>
