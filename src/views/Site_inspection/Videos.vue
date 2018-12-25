@@ -23,14 +23,14 @@
     </div>
 </template>
 <script>
-    import Navbar from '../Navbar.vue';
-    import Footer from '../Footer.vue';
+import Navbar from '../Navbar.vue';
+import Footer from '../Footer.vue';
 
-    export default{
-        components: {
-            'nav-bar': Navbar,
-            'app-footer': Footer,
-        },
+export default{
+  components: {
+    'nav-bar': Navbar,
+    'app-footer': Footer,
+  },
 
-    };
+};
 </script>

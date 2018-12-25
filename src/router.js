@@ -9,7 +9,7 @@ import ResetPassword from './views/Authentication/ResetPassword.vue';
 import User_dashboard from './views/Authentication/User_dashboard.vue';
 import Unlicensed from './views/Authentication/Unlicensed.vue';
 import Estate_dev from './views/Our_interest/Estate_dev.vue';
-import Semicert from './views/Our_interest/Semicert.vue'
+import Semicert from './views/Our_interest/Semicert.vue';
 import Estate_dev2 from './views/Our_interest/Estate_dev2.vue';
 import Archline from './views/Our_interest/Archline.vue';
 import SiteSupervision from './views/Our_interest/Archline/SiteSupervision.vue';
@@ -63,11 +63,6 @@ import Comingsoon from './views/Estate_league/Comingsoon.vue';
 import Training from './views/Our_interest/Training.vue';
 
 
-
-
-
-
-
 Vue.use(Router);
 
 export default new Router({
@@ -78,14 +73,14 @@ export default new Router({
       name: 'home',
       component: Home,
     },
-    
+
     {
       path: '/reg',
       name: 'reg',
       component: Reg,
-      meta:{
-        forVisitorS: true
-      }
+      meta: {
+        forVisitorS: true,
+      },
     },
     {
       path: '/visualization',
@@ -104,12 +99,12 @@ export default new Router({
     {
       path: '/resetpassword/:token',
       name: 'resetpassword',
-      component:ResetPassword,
+      component: ResetPassword,
     },
     {
       path: '/dash',
       name: 'user_dashboard',
-      component:User_dashboard,
+      component: User_dashboard,
     },
 
     {
@@ -160,31 +155,31 @@ export default new Router({
       name: 'landscaping',
       component: Landscaping,
     },
-      {
-          path: '/semicert',
-          name: 'semicert',
-          component: Semicert,
-      },
+    {
+      path: '/semicert',
+      name: 'semicert',
+      component: Semicert,
+    },
     {
       path: '/properties',
       name: 'properties',
       component: Properties,
     },
     {
-        path: '/training',
-        name: 'training',
-        component: Training,
+      path: '/training',
+      name: 'training',
+      component: Training,
     },
     {
       path: '/overview',
       name: 'overview',
       component: Overview,
     },
-      {
-          path: '/about',
-          name: 'about',
-          component:About,
-      },
+    {
+      path: '/about',
+      name: 'about',
+      component: About,
+    },
     {
       path: '/dates',
       name: 'important_date',
@@ -230,22 +225,22 @@ export default new Router({
       name: 'transact',
       component: Transact_box,
     },
-     {
+    {
       path: '/prefered',
       name: 'prefered',
       component: Prefered_pro,
     },
     {
-        path: '/estatedev/state',
-        name: 'states',
-        component: add_states,
+      path: '/estatedev/state',
+      name: 'states',
+      component: add_states,
     },
     {
-        path: '/estatedev/locations',
-        name: 'locations',
-        component: add_locations,
+      path: '/estatedev/locations',
+      name: 'locations',
+      component: add_locations,
     },
-     {
+    {
       path: '/joining',
       name: 'joining',
       component: Joining,
@@ -255,12 +250,12 @@ export default new Router({
       name: 'buy',
       component: Buy,
     },
-     {
+    {
       path: '/sell',
       name: 'sell',
       component: Sell,
     },
-     {
+    {
       path: '/leaguebuy',
       name: 'leaguebuy',
       component: LeagueBuy,
@@ -275,7 +270,7 @@ export default new Router({
       name: 'estatesell',
       component: LeagueSell,
     },
-     {
+    {
       path: '/estatedev2',
       name: 'estatedev',
       component: Estate_dev2,
@@ -291,9 +286,9 @@ export default new Router({
       component: Clients,
     },
     {
-        path: '/clients/edit/:id',
-        name: 'clientsEdit',
-        component: clientEdit,
+      path: '/clients/edit/:id',
+      name: 'clientsEdit',
+      component: clientEdit,
     },
     {
       path: '/confirm',
@@ -301,14 +296,14 @@ export default new Router({
       component: ConfirmUser,
     },
     {
-        path: '/confirm/edit/:_id',
-        name: 'confirmEdit',
-        component: confirmUserEdit,
+      path: '/confirm/edit/:_id',
+      name: 'confirmEdit',
+      component: confirmUserEdit,
     },
     {
-        path: '/profile/:_id',
-        name: 'profile',
-        component: Profile,
+      path: '/profile/:_id',
+      name: 'profile',
+      component: Profile,
     },
     {
       path: '/promo',
@@ -356,9 +351,9 @@ export default new Router({
       component: Tradesell,
     },
     {
-        path: '/trading',
-        name: 'trading',
-        component:GetTrade,
+      path: '/trading',
+      name: 'trading',
+      component: GetTrade,
     },
     {
       path: '/tradebuy',
@@ -376,21 +371,21 @@ export default new Router({
       component: PropBuy,
     },
     {
-        path: '/tradewithus',
-        name: 'tradeWithUs',
-        component: tradeWithUs,
+      path: '/tradewithus',
+      name: 'tradeWithUs',
+      component: tradeWithUs,
     },
     {
-        path: '/comingsoon',
-        name: 'comingsoon',
-        component: Comingsoon,
+      path: '/comingsoon',
+      name: 'comingsoon',
+      component: Comingsoon,
     },
-      {
-          path: '/videos',
-          name: 'videos',
-          component: Videos,
-      },
-    
-    
+    {
+      path: '/videos',
+      name: 'videos',
+      component: Videos,
+    },
+
+
   ],
 });
