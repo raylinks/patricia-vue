@@ -27,6 +27,7 @@ import Important_date from './views/Business_club/Important_date.vue';
 import Enter_league from './views/Estate_league/Enter_league.vue';
 import Join_league from './views/Estate_league/Join_league.vue';
 import General_inspec from './views/Site_inspection/General_inspec.vue';
+import Videos from './views/Site_inspection/Videos.vue';
 import Private_inspec from './views/Site_inspection/Private_inspec.vue';
 import Index from './views/Admin/Index.vue';
 import UserRole from './views/Authentication/UserRole.vue';
@@ -129,11 +130,6 @@ export default new Router({
       name: 'estate_dev',
       component: Estate_dev,
     },
-      {
-          path: '/semicert',
-          name: 'semicert',
-          component:Semicert,
-      },
     {
       path: '/archline',
       name: 'archline',
@@ -164,6 +160,11 @@ export default new Router({
       name: 'landscaping',
       component: Landscaping,
     },
+      {
+          path: '/semicert',
+          name: 'semicert',
+          component: Semicert,
+      },
     {
       path: '/properties',
       name: 'properties',
@@ -384,6 +385,11 @@ export default new Router({
         name: 'comingsoon',
         component: Comingsoon,
     },
+      {
+          path: '/videos',
+          name: 'videos',
+          component: Videos,
+      },
     
     
   ],

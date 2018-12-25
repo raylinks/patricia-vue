@@ -10,7 +10,7 @@
                         <div class="page-heading">
                             <h1>About Us</h1>
                             <ul>
-                                <li><a href="index-2.html">Home</a></li>
+
                                 <li><a href="#">About Us</a></li>
                             </ul>
                         </div>
