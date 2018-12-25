@@ -63,7 +63,7 @@
 						</div>
 						<div class="media-body">
 							<h2></h2>
-							<p>ESTATE DEV SERIES</p>
+							<p>ESTATE DEVELOPMENT</p>
 							<a href="service-details.html" class="btn morebutton">Read More</a>
 						</div>
 					</div>
@@ -482,64 +482,37 @@
 				</div>
 			</div>
 			 <div class="row">
-				<!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="team-member">
-						<img src="img/tm.jpg" alt=""/>
-						<h2>Elizabeth </h2>
-						<h3>Appertment Sell</h3>
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							<li><a href="#"><i class="fa fa-google"></i></a></li>
-							<li><a href="#"><i class="fa fa-skype"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="team-member">
-						<img src="img/tm2.jpg" alt=""/>
-						<h2>Gabriella</h2>
-						<h3>House Rent</h3>
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							<li><a href="#"><i class="fa fa-google"></i></a></li>
-							<li><a href="#"><i class="fa fa-skype"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="team-member">
-						<img src="img/tm3.jpg" alt=""/>
-						<h2>Abigail</h2>
-						<h3>Appertment Management</h3>
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							<li><a href="#"><i class="fa fa-google"></i></a></li>
-							<li><a href="#"><i class="fa fa-skype"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="team-member">
-						<img src="img/tm4.jpg" alt=""/>
-						<h2>Mackenzie</h2>
-						<h3>Find An Agents</h3>
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							<li><a href="#"><i class="fa fa-google"></i></a></li>
-							<li><a href="#"><i class="fa fa-skype"></i></a></li>
-						</ul>
-					</div>
-				</div> -->
 
-			</div> -->
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="team-member">
+						<img src="img/lifepage.jpg" alt=""/>
+						<h2>...l</h2>
+						<h3>...</h3>
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="#"><i class="fa fa-google"></i></a></li>
+							<li><a href="#"><i class="fa fa-skype"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="team-member">
+						<img src="img/tali.jpg" alt=""/>
+						<h2>...</h2>
+						<h3>...</h3>
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="#"><i class="fa fa-google"></i></a></li>
+							<li><a href="#"><i class="fa fa-skype"></i></a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
 		</div>
 	</div>
 	 <app-footer  v-if="this.$route.path !== '/dash'"></app-footer>

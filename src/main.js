@@ -14,6 +14,17 @@ Vue.use(VueResource);
 sync(store, router)
 
 
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+      return Vue.auth.isAuthenticated() ? next() : next({ path: '/login' });
+  }
+  if (to.matched.some(record => record.meta.forGuest)) {
+      return Vue.auth.isAuthenticated() ? next({ path: '/companies' }) : next();
+  }
+  next();
+  
+});
+
 new Vue({
   router,
   store,

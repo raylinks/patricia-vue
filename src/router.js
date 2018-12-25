@@ -9,12 +9,20 @@ import ResetPassword from './views/Authentication/ResetPassword.vue';
 import User_dashboard from './views/Authentication/User_dashboard.vue';
 import Unlicensed from './views/Authentication/Unlicensed.vue';
 import Estate_dev from './views/Our_interest/Estate_dev.vue';
+import Semicert from './views/Our_interest/Semicert.vue'
 import Estate_dev2 from './views/Our_interest/Estate_dev2.vue';
 import Archline from './views/Our_interest/Archline.vue';
+import SiteSupervision from './views/Our_interest/Archline/SiteSupervision.vue';
+import BuildingDesign from './views/Our_interest/Archline/BuildingDesign.vue';
+import Modelling from './views/Our_interest/Archline/Modelling.vue';
+import Landscaping from './views/Our_interest/Archline/Landscaping.vue';
+import Visualization from './views/Our_interest/Archline/Visualization.vue';
+import Interior from './views/Our_interest/Archline/Interior.vue';
 import Buy from './views/Our_interest/Buy.vue';
 import Sell from './views/Our_interest/Sell.vue';
 import Properties from './views/Our_interest/Properties.vue';
 import Overview from './views/Business_club/Overview.vue';
+import About from './views/Who_we_are/About.vue';
 import Important_date from './views/Business_club/Important_date.vue';
 import Enter_league from './views/Estate_league/Enter_league.vue';
 import Join_league from './views/Estate_league/Join_league.vue';
@@ -30,9 +38,12 @@ import LeagueBuy2 from './views/Estate_league/LeagueBuy2.vue';
 import LeagueSell from './views/Estate_league/LeagueSell.vue';
 import Market from './views/Authentication/Market.vue';
 import Clients from './views/Authentication/Clients.vue';
+import clientEdit from './views/Edit/clientEdit.vue';
+import confirmUserEdit from './views/Edit/confirmUserEdit.vue';
 import ConfirmUser from './views/Authentication/ConfirmUser.vue';
 import Exc_promo from './views/Authentication/Exc_promo.vue';
 import Site_insp from './views/Authentication/Site_insp.vue';
+import Profile from './views/Authentication/Profile.vue';
 import Biz__club from './views/Authentication/Biz__club.vue';
 import League_table from './views/Authentication/League_table.vue';
 import Transfer_req from './views/Authentication/Transfer_req.vue';
@@ -44,9 +55,14 @@ import Tradesell from './views/Trade/Tradesell.vue';
 import GetTrade from './views/Authentication/GetTrade.vue';
 import Buynsell from './views/Trade/Buynsell.vue';
 import PropBuy from './views/Authentication/PropBuy.vue';
+import add_states from './views/Authentication/add_states.vue';
+import add_locations from './views/Authentication/add_locations.vue';
 import tradeWithUs from './views/Trade/tradeWithUs.vue';
 import Comingsoon from './views/Estate_league/Comingsoon.vue';
 import Training from './views/Our_interest/Training.vue';
+
+
+
 
 
 
@@ -71,20 +87,18 @@ export default new Router({
       }
     },
     {
+      path: '/visualization',
+      name: 'visualization',
+      component: Visualization,
+    },
+    {
       path: '/login',
       name: 'login',
-      component:Login,
-      meta:{
-        forVisitorS: true
-      }
     },
     {
       path: '/forgetpassword',
       name: 'forgetpassword',
-      component:ForgetPassword,
-      meta:{
-        forVisitorS: true
-      }
+
     },
     {
       path: '/resetpassword/:token',
@@ -102,23 +116,53 @@ export default new Router({
       name: 'contact',
       component: Contact_us,
     },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
-    },
+    // {
+    //   path: '/about',
+    //   name: 'about',
+    //   // route level code-splitting
+    //   // this generates a separate chunk (about.[hash].js) for this route
+    //   // which is lazy-loaded when the route is visited.
+    //   component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+    // },
     {
       path: '/estatedev',
       name: 'estate_dev',
       component: Estate_dev,
     },
+      {
+          path: '/semicert',
+          name: 'semicert',
+          component:Semicert,
+      },
     {
       path: '/archline',
       name: 'archline',
       component: Archline,
+    },
+    {
+      path: '/building',
+      name: 'building',
+      component: BuildingDesign,
+    },
+    {
+      path: '/sitesupervision',
+      name: 'sitesupervision',
+      component: SiteSupervision,
+    },
+    {
+      path: '/interior',
+      name: 'interior',
+      component: Interior,
+    },
+    {
+      path: '/modelling',
+      name: 'modelling',
+      component: Modelling,
+    },
+    {
+      path: '/landscaping',
+      name: 'landscaping',
+      component: Landscaping,
     },
     {
       path: '/properties',
@@ -135,6 +179,11 @@ export default new Router({
       name: 'overview',
       component: Overview,
     },
+      {
+          path: '/about',
+          name: 'about',
+          component:About,
+      },
     {
       path: '/dates',
       name: 'important_date',
@@ -185,6 +234,16 @@ export default new Router({
       name: 'prefered',
       component: Prefered_pro,
     },
+    {
+        path: '/estatedev/state',
+        name: 'states',
+        component: add_states,
+    },
+    {
+        path: '/estatedev/locations',
+        name: 'locations',
+        component: add_locations,
+    },
      {
       path: '/joining',
       name: 'joining',
@@ -231,9 +290,24 @@ export default new Router({
       component: Clients,
     },
     {
+        path: '/clients/edit/:id',
+        name: 'clientsEdit',
+        component: clientEdit,
+    },
+    {
       path: '/confirm',
       name: 'confirm',
       component: ConfirmUser,
+    },
+    {
+        path: '/confirm/edit/:_id',
+        name: 'confirmEdit',
+        component: confirmUserEdit,
+    },
+    {
+        path: '/profile/:_id',
+        name: 'profile',
+        component: Profile,
     },
     {
       path: '/promo',
@@ -310,6 +384,7 @@ export default new Router({
         name: 'comingsoon',
         component: Comingsoon,
     },
+    
     
   ],
 });

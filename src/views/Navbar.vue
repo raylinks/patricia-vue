@@ -16,10 +16,10 @@
                     <div class="col-lg-5 col-sm-6 col-xs-12">
                         <div class="herader-topbar-col tobar-rightside center767">
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="https://web.facebook.com/Team-LTD-283450735644748/?_rdc=1&_rdr"  target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/t.e.a.mltd/"  target="_blank"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
@@ -44,7 +44,14 @@
             <nav id="main-menu" class="main-menu">
               <ul>
                 <li class="active"><a href="/">Home</a></li>
-                <li><a href="">What we do<i class="fa fa-caret-down"></i></a>
+                  <li><a href="/#">Who we are<i class="fa fa-caret-down"></i></a>
+                      <ul>
+                          <li><a href="/#/about">About us</a></li>
+                          <li><a href="/#/">Our Team</a></li>
+                          <li><a href="/#/">Core Values</a></li>
+                      </ul>
+                  </li>
+                <li><a href="/#">What we do<i class="fa fa-caret-down"></i></a>
                     <ul>
                     <li><a href="/#/estatedev2">Estate development</a></li>
                     <li><a href="/#/archline">ArchLine</a></li>
@@ -65,7 +72,7 @@
 
                   </ul>-->
                 </li>
-                <li><a href="">Inspect Site</a>
+                <li><a href="/#">Inspect Site</a>
                     <ul>
                         <li><a href="/#/">Videos /images</a></li>
 

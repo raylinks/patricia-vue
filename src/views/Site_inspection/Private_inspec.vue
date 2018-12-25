@@ -11,8 +11,8 @@
 					<div class="sec-title">
 						<h1>Private<span>Inspection Date</span></h1>
 						<div class="border-shape"></div>
-						<h1>Wednesday 9am @5000</h1>
-						<h1>Saturday 7:30am @2500</h1>
+						<h1>Wednesday 9am </h1>
+						<h1>Saturday 7:30am </h1>
 					</div>
 				</div>
 			</div>

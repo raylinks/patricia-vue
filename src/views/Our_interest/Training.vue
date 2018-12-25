@@ -43,7 +43,7 @@
                             <div class="media-body">
                                 <h2>Our SemiCert</h2>
                                 <p>A seminal and concert, mega 2 in 1 combo. It occurs twice yearly.</p>
-                                <a href="service-details.html" class="btn morebutton">Read More</a>
+                                <a href="/#/semicert" class="btn morebutton">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -68,14 +68,14 @@
     </div>
 </template>
 <script>
-    import Navbar from '../Navbar.vue';
-    import Footer from '../Footer.vue';
+import Navbar from '../Navbar.vue';
+import Footer from '../Footer.vue';
 
-    export default{
-        components: {
-            'nav-bar': Navbar,
-            'app-footer': Footer,
-        },
+export default{
+  components: {
+    'nav-bar': Navbar,
+    'app-footer': Footer,
+  },
 
-    };
+};
 </script>

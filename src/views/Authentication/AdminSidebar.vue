@@ -16,6 +16,8 @@
                 <div class="sidebar-inner slimscrollleft">
 
                     <div id="sidebar-menu">
+
+
                         <ul>
                             <li class="menu-title">Main</li>
 
@@ -27,6 +29,11 @@
                             </li>
 
                             <li class="has_sub">
+                                <a href="/#/profile" class="waves-effect"><i class="mdi mdi-layers"></i> <span>Profile </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+
+                            </li>
+                            <span v-if="role ===  'user' ">
+                            <li class="has_sub">
                                 <a href="/#/market" class="waves-effect"><i class="mdi mdi-layers"></i> <span>Market </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
 
                             </li>
@@ -34,6 +41,8 @@
                             <li>
                                 <a href="/#/promo" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span>Exclusive promo</span></a>
                             </li>
+                            </span>
+
                             <li>
                                 <a href="/#/siteinsp" class="waves-effect"><i class="mdi mdi-bullseye"></i><span>SITE INSP LOG</span></a>
                             </li>
@@ -42,6 +51,25 @@
 
                             </li>
 
+                            <li class="has_sub">
+                                <a href="/#/estatedev/state" class="waves-effect"><i class="mdi mdi-layers"></i> <span> Add State </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <!--<ul class="list-unstyled">-->
+                                    <!--<li><a href="advanced-highlight.html">Highlight</a></li>-->
+                                    <!--<li><a href="advanced-rating.html">Rating</a></li>-->
+                                    <!--<li><a href="advanced-alertify.html">Alertify</a></li>-->
+                                    <!--<li><a href="advanced-rangeslider.html">Range Slider</a></li>-->
+                                <!--</ul>-->
+                            </li>
+
+                            <li class="has_sub">
+                                <a href="/#/estatedev/locations" class="waves-effect"><i class="mdi mdi-layers"></i> <span> Add Locations </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <!--<ul class="list-unstyled">-->
+                                <!--<li><a href="advanced-highlight.html">Highlight</a></li>-->
+                                <!--<li><a href="advanced-rating.html">Rating</a></li>-->
+                                <!--<li><a href="advanced-alertify.html">Alertify</a></li>-->
+                                <!--<li><a href="advanced-rangeslider.html">Range Slider</a></li>-->
+                                <!--</ul>-->
+                            </li>
 
 
                             <li>

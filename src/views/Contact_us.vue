@@ -71,7 +71,7 @@
 						</div>
 						<div class="single-info">
 							<h2>Phone:</h2>
-							<p>+234</p>
+							<p>+2348022430140</p>
 						</div>
 						<div class="single-info">
 							<h2>Skype:</h2>

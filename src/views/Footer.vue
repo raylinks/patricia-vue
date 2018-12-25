@@ -10,31 +10,28 @@
 							<h2>About Us</h2>
 							<p></p>
 							<p></p>
-							<ul>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-google"></i></a></li>
-								<li><a href="#"><i class="fa fa-skype"></i></a></li>
-							</ul>
+							<p>You can reach.</p>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="footer-wedget-two">
 							<h2>Reach US</h2>
-							<ul>
-								<li><a href="index-2.html">Home</a></li>
-								<li><a href="contact.html">Our interest</a></li>
-								<li><a href="about.html">Business Club</a></li>
-								<li><a href="service.html">Estate league</a></li>
-								<li><a href="agents.html">	Site inspection</a></li>
-								<li><a href="blog.html">Contact Us</a></li>
+							<p>22, Olufunmilayo street, dideolu estate.</p>
+							<p>2nd gate b/stop, Ogba-Ikeja, Lagos.</p>
+							<br>
+							<p>15, Adeoye Fafore Street, on-george b/stop</p>
+							<p>off idimu ikotun road, Lagos.</p>
+							<br>
+							<p>08022430140, 08130458323</p>
+							<br>
+							<p>Working hours: Mon-Fri 9am - 4pm</p>
 
-							</ul>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="footer-wedget-two">
 							<h2>quick links</h2>
+							<p>You can reach us here.</p>
 							<ul>
 								<li><a href="index-2.html">Home</a></li>
 								<li><a href="contact.html">Our interest</a></li>
@@ -52,7 +49,7 @@
 							<ul>
 								<li><i class="fa fa-location-arrow"></i>Ikeja</li>
 								<li><i class="fa fa-envelope-o"></i>support@teamltd.org</li>
-								<li><i class="fa fa-phone"></i>+234</li>
+								<li><i class="fa fa-phone"></i>+2348022430140</li>
 							</ul>
 						</div>
 					</div>

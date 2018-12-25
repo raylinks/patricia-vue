@@ -40,23 +40,33 @@
         <!-- Testimonial Section End -->
 
 
+			<!-- -->
+			<section>
+				<div class="container text-center">
 
+
+					<div style="max-width:550px; margin:auto; margin-top:60px;">
+						<div class="countdown countdown-lg" data-labels="years,months,weeks,days,hour,min,sec" data-from="March 30, 2019 15:03:26"><!-- Example Date From: December 31, 2018 15:03:26 --></div>
+					</div>
+
+				</div>
+			</section>
+			<!-- / -->
         <app-footer></app-footer>
 
     </div>
 </template>
 <script>
-    import Navbar from '../Navbar.vue';
-    import Footer from '../Footer.vue';
+import Navbar from '../Navbar.vue';
+import Footer from '../Footer.vue';
 
-    export default{
-        data(){
-            return{}
-
-        },
-        components: {
-            'nav-bar': Navbar,
-            'app-footer': Footer,
-        },
-    }
+export default{
+  data() {
+    return {};
+  },
+  components: {
+    'nav-bar': Navbar,
+    'app-footer': Footer,
+  },
+};
 </script>

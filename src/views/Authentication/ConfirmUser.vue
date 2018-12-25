@@ -61,6 +61,9 @@
                                                       <td>{{cat.lastname}}</td>
                                                       <td>{{cat.email}}</td>
                                                       <td><button type="button" class="btn btn-info">Confirm</button></td>
+                                                       <td><button><a  :href="`/#/confirm/edit/${cat._id}/`"  type="button" class="btn btn-info">Edit</a></button></td>
+                                                       <td><button @click="deleteUser(cat._id)" type="button" class="btn btn-info">Delete</button></td>
+
                                                   </tr>
 
                                                 </tbody>
@@ -98,12 +101,25 @@ export default{
   name: 'confirm',
   data: () => ({
     messages: [],
+
   }),
   mounted() {
     fetch(confirmUser).then(response => response.json()).then((result) => {
       // console.log(result);
       this.messages = result.data;
     });
+  },
+  methods: {
+    deleteUser(id) {
+      const answer = 'yes';
+      if (prompt('Are you sure you want to delete this user?').toLowerCase() === answer) {
+        this.messages.splice(id, 1);
+        this.$http.get(`http://localhost:3000/api/v1/users/${this.$route.params._id}`);
+      } else {
+
+      }
+    },
+
   },
   components: {
     'side-bar': AdminSidebar,

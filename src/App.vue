@@ -16,9 +16,9 @@ import Transact_box from './views/Admin/Transact_box.vue';
 
 export default {
   components: {
-    'nav-bar': Navbar,
-    'app-footer': Footer,
-    'app-dash': Transact_box,
+    //    'nav-bar': Navbar,
+    //    'app-footer': Footer,
+    //    'app-dash': Transact_box,
   },
 };
 </script>
