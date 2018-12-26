@@ -1,6 +1,7 @@
 <template>
 <div>
 
+
 <!-- Page Heading Section Start -->
 	<div class="pagehding-sec">
 		<div class="images-overlay"></div>
@@ -74,13 +75,6 @@
 	<!-- Project Section Start -->
 
 
+
 </div>
 </template>
-<script>
-
-
-export default{
-
-
-};
-</script>

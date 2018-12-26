@@ -72,15 +72,7 @@
 		</div>
 	</div>
 	<!-- Project Section Start -->
-
+	<
 
 </div>
 </template>
-<script>
-
-
-export default{
-
-
-};
-</script>

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
-import Contact_us from './views/Contact_us.vue';
+import Contactus from './views/Contactus.vue';
 import Reg from './views/Authentication/Reg.vue';
 import Login from './views/Authentication/Login.vue';
 import ForgetPassword from './views/Authentication/ForgetPassword.vue';
@@ -90,10 +90,12 @@ export default new Router({
     {
       path: '/login',
       name: 'login',
+      component: Login,
     },
     {
       path: '/forgetpassword',
       name: 'forgetpassword',
+      component: ForgetPassword,
 
     },
     {
@@ -110,7 +112,7 @@ export default new Router({
     {
       path: '/contact',
       name: 'contact',
-      component: Contact_us,
+      component: Contactus,
     },
     // {
     //   path: '/about',
@@ -157,7 +159,7 @@ export default new Router({
     },
     {
       path: '/semicert',
-      name: 'semicert',
+      name: 'semicertif',
       component: Semicert,
     },
     {
