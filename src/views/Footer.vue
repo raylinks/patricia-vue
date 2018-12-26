@@ -8,9 +8,11 @@
 					<div class="col-md-3 col-sm-6">
 						<div class="footer-wedget-one">
 							<h2>About Us</h2>
-							<p></p>
-							<p></p>
-							<p>You can reach.</p>
+							<p style="text-align:justify">Together Eveyone Achieves more(T.E.A.M) Ltd is a<br>marketing
+								company with ultimate bias for opportunities in Real estate,<br> investments and trainings.
+								The company is duly registered<br> with her  Head office in lagos,Nigeria.</p>
+
+
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">

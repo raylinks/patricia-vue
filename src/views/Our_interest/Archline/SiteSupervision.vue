@@ -1,6 +1,6 @@
 <template>
 <div>
-
+	<nav-bar ></nav-bar>
 <!-- Page Heading Section Start -->
 	<div class="pagehding-sec">
 		<div class="images-overlay"></div>
@@ -11,7 +11,7 @@
 						<h1>ARCHLINE</h1>
 						<ul>
 							<li><a href="index-2.html"></a></li>
-							<li><a href="#">Our Service includes</a></li>
+							<li><a href="#"></a></li>
 						</ul>
 					</div>
 				</div>
@@ -26,9 +26,9 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="sec-title">
-						<h1>Our<span>Gallery</span></h1>
+						<h1>Site<span>Supervision</span></h1>
 						<div class="border-shape"></div>
-						<p>Lorem ipsum dolor sit amet, pellentesque enim lorem quis vivamus amet.</p>
+						<p>....</p>
 					</div>
 				</div>
 			</div>
@@ -72,15 +72,20 @@
 		</div>
 	</div>
 	<!-- Project Section Start -->
+	<app-footer  ></app-footer>
 
 
 </div>
 </template>
 <script>
+    import Navbar from '../../Navbar.vue';
+    import Footer from '../../Footer.vue';
 
+    export default{
+        components: {
+            'nav-bar': Navbar,
+            'app-footer': Footer,
+        },
 
-export default{
-
-
-};
+    };
 </script>

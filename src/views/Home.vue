@@ -486,29 +486,29 @@
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 					<div class="team-member">
 						<img src="img/lifepage.jpg" alt=""/>
-						<h2>...l</h2>
-						<h3>...</h3>
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							<li><a href="#"><i class="fa fa-google"></i></a></li>
-							<li><a href="#"><i class="fa fa-skype"></i></a></li>
-						</ul>
+						<!--<h2>...l</h2>-->
+						<!--<h3>...</h3>-->
+						<!--<ul>-->
+							<!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+							<!--<li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+							<!--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>-->
+							<!--<li><a href="#"><i class="fa fa-google"></i></a></li>-->
+							<!--<li><a href="#"><i class="fa fa-skype"></i></a></li>-->
+						<!--</ul>-->
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 					<div class="team-member">
 						<img src="img/tali.jpg" alt=""/>
-						<h2>...</h2>
-						<h3>...</h3>
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							<li><a href="#"><i class="fa fa-google"></i></a></li>
-							<li><a href="#"><i class="fa fa-skype"></i></a></li>
-						</ul>
+						<!--<h2>...</h2>-->
+						<!--<h3>...</h3>-->
+						<!--<ul>-->
+							<!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+							<!--<li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+							<!--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>-->
+							<!--<li><a href="#"><i class="fa fa-google"></i></a></li>-->
+							<!--<li><a href="#"><i class="fa fa-skype"></i></a></li>-->
+						<!--</ul>-->
 					</div>
 				</div>
 

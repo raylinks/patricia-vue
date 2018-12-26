@@ -18,9 +18,9 @@
                             <ul>
                                 <li><a href="https://web.facebook.com/Team-LTD-283450735644748/?_rdc=1&_rdr"  target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                <!--<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>-->
                                 <li><a href="https://www.instagram.com/t.e.a.mltd/"  target="_blank"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                <!--<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>-->
                             </ul>
                         </div>
                     </div>
@@ -48,7 +48,6 @@
                       <ul>
                           <li><a href="/#/about">About us</a></li>
                           <li><a href="/#/">Our Team</a></li>
-                          <li><a href="/#/">Core Values</a></li>
                       </ul>
                   </li>
                 <li><a href="/#">What we do<i class="fa fa-caret-down"></i></a>

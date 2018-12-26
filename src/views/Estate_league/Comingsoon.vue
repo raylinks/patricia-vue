@@ -10,7 +10,7 @@
 
                             <ul>
                                 <li><a href=""></a></li>
-                                <h1></h1>
+
                                 <h1>ESTATE LEAGUE</h1>
 
                             </ul>
@@ -43,9 +43,7 @@
 			<!-- -->
 			<section>
 				<div class="container text-center">
-
-
-					<div style="max-width:550px; margin:auto; margin-top:60px;">
+					<div style="max-width:550px;  margin:auto; margin-top:60px;">
 						<div class="countdown countdown-lg" data-labels="years,months,weeks,days,hour,min,sec" data-from="March 30, 2019 15:03:26"><!-- Example Date From: December 31, 2018 15:03:26 --></div>
 					</div>
 

@@ -63,7 +63,8 @@
 						<h1>main office</h1>
 						<div class="single-info">
 							<h2>Address</h2>
-							<p>Top floor Rear Building, 22 Olufunmilayo street, Dideolu estate, 1st Gate Bus Stop. Ogba Ikeja.</p>
+							<p>Top floor Rear Building, 22 Olufunmilayo street, Dideolu estate, 1st Gate Bus Stop. Ogba Ikeja.</p><br>
+							<p>15, Adeoye Fafore Street, on-george b/stop, off idimu ikotun road, Lagos.</p>
 						</div>
 						<div class="single-info">
 							<h2>Email: </h2>
@@ -73,10 +74,7 @@
 							<h2>Phone:</h2>
 							<p>+2348022430140</p>
 						</div>
-						<div class="single-info">
-							<h2>Skype:</h2>
-							<p>your_skype</p>
-						</div>
+
 					</div>
 				</div>
 			</div>

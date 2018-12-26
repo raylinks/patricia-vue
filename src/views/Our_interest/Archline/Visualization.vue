@@ -1,5 +1,6 @@
 <template>
 <div>
+	<nav-bar ></nav-bar>
 
 <!-- Page Heading Section Start -->
 	<div class="pagehding-sec">
@@ -11,7 +12,7 @@
 						<h1>ARCHLINE</h1>
 						<ul>
 							<li><a href="index-2.html"></a></li>
-							<li><a href="#">Our Service includes</a></li>
+							<li><a href="#"></a></li>
 						</ul>
 					</div>
 				</div>
@@ -28,7 +29,7 @@
 					<div class="sec-title">
 						<h1>3D<span>Visualization</span></h1>
 						<div class="border-shape"></div>
-						<p>Lorem ipsum dolor sit amet, pellentesque enim lorem quis vivamus amet.</p>
+						<p>.....</p>
 					</div>
 				</div>
 			</div>
@@ -36,23 +37,13 @@
 				<div class="col-md-3 col-sm-6  inner">
 					<div class="item">
 						<img src="img/visual1.jpg" alt="" />
-						<div class="project-hoverlay">
-							<div class="project-text">
-								<a class="gallery-photo" href="img/interior1.jpg"><i class="fa fa-arrows-alt"></i></a>
-								<h3>Photo 1</h3>
-							</div>
-						</div>
+
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6  inner">
 					<div class="item">
 						<img src="img/visual2.jpg" alt="" />
-						<div class="project-hoverlay">
-							<div class="project-text">
-								<a class="gallery-photo" href="img/p2.jpg"><i class="fa fa-arrows-alt"></i></a>
-								<h3>Photo 2</h3>
-							</div>
-						</div>
+
 					</div>
 				</div>
 
@@ -61,15 +52,19 @@
 		</div>
 	</div>
 	<!-- Project Section Start -->
-
+	<app-footer  ></app-footer>
 
 </div>
 </template>
 <script>
+    import Navbar from '../../Navbar.vue';
+    import Footer from '../../Footer.vue';
 
+    export default{
+        components: {
+            'nav-bar': Navbar,
+            'app-footer': Footer,
+        },
 
-export default{
-
-
-};
+    };
 </script>

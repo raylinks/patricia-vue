@@ -32,17 +32,17 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="abt-lft">
                             <h2>About us </h2>
-                            <p>Together Everyone  achieves more(T.E.A.M) Ltd is a marketing company with ultimate bias for opportunities in Real estate, investments and trainings. The company is duly registered with  her Head office in LAGOS, Nigeria.<br> The vision was born out of the desire to bridge the gap between "Genuine" Real estate and Investment opportunities ans the prospective public who wish to invest in the areas.</p>
+                            <p>Together Everyone  achieves more(T.E.A.M) Ltd is a marketing company with ultimate bias for opportunities in Real estate, investments and trainings. The company is duly registered with  her Head office in LAGOS, Nigeria.<br> The vision was born out of the desire to bridge the gap between "Genuine" Real estate and Investment opportunities and the prospective public who wish to invest in these areas.</p>
                             <h4>Our Vision </h4>
                             <p>Our vision is simple, to make lives and not just a living.</p>
                             <h4>Our Mission </h4>
                             <p>To enrich lifes through our services, information and association wise and ofcourse materially.</p>
-                            <h4>Core Values: </h4>
+                            <h4>Core values: </h4>
                             <p>We believe in consistency and developing these values each day.</p>
                             <ul>
                                 <li>Building Integrity</li>
-                                <li>Building Creativity</li>
-                                <li>Adding Values</li>
+                                <li>Inspiring Creativity</li>
+                                <li>Adding Value</li>
                             </ul>
                         </div>
                     </div>

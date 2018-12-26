@@ -1,6 +1,6 @@
 <template>
 <div>
-
+	<nav-bar ></nav-bar>
 
 <!-- Page Heading Section Start -->
 	<div class="pagehding-sec">
@@ -74,7 +74,19 @@
 		</div>
 	</div>
 	<!-- Project Section Start -->
-
+	<app-footer  ></app-footer>
 
 </div>
 </template>
+<script>
+    import Navbar from '../../Navbar.vue';
+    import Footer from '../../Footer.vue';
+
+    export default{
+        components: {
+            'nav-bar': Navbar,
+            'app-footer': Footer,
+        },
+
+    };
+</script>
