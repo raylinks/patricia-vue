@@ -6,11 +6,11 @@ import Reg from './views/Authentication/Reg.vue';
 import Login from './views/Authentication/Login.vue';
 import ForgetPassword from './views/Authentication/ForgetPassword.vue';
 import ResetPassword from './views/Authentication/ResetPassword.vue';
-import User_dashboard from './views/Authentication/User_dashboard.vue';
+import Userdashboard from './views/Authentication/Userdashboard.vue';
 import Unlicensed from './views/Authentication/Unlicensed.vue';
-import Estate_dev from './views/Our_interest/Estate_dev.vue';
+import Estatedev from './views/Our_interest/Estatedev.vue';
 import Semicert from './views/Our_interest/Semicert.vue';
-import Estate_dev2 from './views/Our_interest/Estate_dev2.vue';
+import Estatedev2 from './views/Our_interest/Estatedev2.vue';
 import Archline from './views/Our_interest/Archline.vue';
 import SiteSupervision from './views/Our_interest/Archline/SiteSupervision.vue';
 import BuildingDesign from './views/Our_interest/Archline/BuildingDesign.vue';
@@ -23,16 +23,16 @@ import Sell from './views/Our_interest/Sell.vue';
 import Properties from './views/Our_interest/Properties.vue';
 import Overview from './views/Business_club/Overview.vue';
 import About from './views/Who_we_are/About.vue';
-import Important_date from './views/Business_club/Important_date.vue';
-import Enter_league from './views/Estate_league/Enter_league.vue';
-import Join_league from './views/Estate_league/Join_league.vue';
-import General_inspec from './views/Site_inspection/General_inspec.vue';
+import Importantdate from './views/Business_club/Importantdate.vue';
+import Enterleague from './views/Estate_league/Enterleague.vue';
+import Joinleague from './views/Estate_league/Joinleague.vue';
+import Generalinspec from './views/Site_inspection/Generalinspec.vue';
 import Videos from './views/Site_inspection/Videos.vue';
-import Private_inspec from './views/Site_inspection/Private_inspec.vue';
+import Privateinspec from './views/Site_inspection/Privateinspec.vue';
 import Index from './views/Admin/Index.vue';
 import UserRole from './views/Authentication/UserRole.vue';
-import Transact_box from './views/Admin/Transact_box.vue';
-import Prefered_pro from './views/Admin/Prefered_pro.vue';
+
+import Preferedpro from './views/Admin/Preferedpro.vue';
 import Joining from './views/Estate_league/Joining.vue';
 import LeagueBuy from './views/Estate_league/LeagueBuy.vue';
 import LeagueBuy2 from './views/Estate_league/LeagueBuy2.vue';
@@ -42,12 +42,12 @@ import Clients from './views/Authentication/Clients.vue';
 import clientEdit from './views/Edit/clientEdit.vue';
 import confirmUserEdit from './views/Edit/confirmUserEdit.vue';
 import ConfirmUser from './views/Authentication/ConfirmUser.vue';
-import Exc_promo from './views/Authentication/Exc_promo.vue';
-import Site_insp from './views/Authentication/Site_insp.vue';
+import Excpromo from './views/Authentication/Excpromo.vue';
+import Siteinsp from './views/Authentication/Siteinsp.vue';
 import Profile from './views/Authentication/Profile.vue';
-import Biz__club from './views/Authentication/Biz__club.vue';
-import League_table from './views/Authentication/League_table.vue';
-import Transfer_req from './views/Authentication/Transfer_req.vue';
+import Bizclub from './views/Authentication/Bizclub.vue';
+import Leaguetable from './views/Authentication/Leaguetable.vue';
+import Transferreq from './views/Authentication/Transferreq.vue';
 import Portfolio from './views/Authentication/Portfolio.vue';
 import Userbuy from './views/Authentication/Userbuy.vue';
 import Usersell from './views/Authentication/Usersell.vue';
@@ -56,8 +56,8 @@ import Tradesell from './views/Trade/Tradesell.vue';
 import GetTrade from './views/Authentication/GetTrade.vue';
 import Buynsell from './views/Trade/Buynsell.vue';
 import PropBuy from './views/Authentication/PropBuy.vue';
-import add_states from './views/Authentication/add_states.vue';
-import add_locations from './views/Authentication/add_locations.vue';
+import addstates from './views/Authentication/addstates.vue';
+import addlocations from './views/Authentication/addlocations.vue';
 import tradeWithUs from './views/Trade/tradeWithUs.vue';
 import Comingsoon from './views/Estate_league/Comingsoon.vue';
 import Training from './views/Our_interest/Training.vue';
@@ -106,7 +106,7 @@ export default new Router({
     {
       path: '/dash',
       name: 'user_dashboard',
-      component: User_dashboard,
+      component: Userdashboard,
     },
 
     {
@@ -125,7 +125,7 @@ export default new Router({
     {
       path: '/estatedev',
       name: 'estate_dev',
-      component: Estate_dev,
+      component: Estatedev,
     },
     {
       path: '/archline',
@@ -185,27 +185,27 @@ export default new Router({
     {
       path: '/dates',
       name: 'important_date',
-      component: Important_date,
+      component: Importantdate,
     },
     {
       path: '/enterleague',
       name: 'enterleague',
-      component: Enter_league,
+      component: Enterleague,
     },
     {
       path: '/joinleague',
       name: 'joinleague',
-      component: Join_league,
+      component: Joinleague,
     },
     {
       path: '/generalinspection',
       name: 'general_inspection',
-      component: General_inspec,
+      component: Generalinspec,
     },
     {
       path: '/privateinspection',
       name: 'private_inspection',
-      component: Private_inspec,
+      component: Privateinspec,
     },
     {
       path: '/admin',
@@ -222,25 +222,21 @@ export default new Router({
       name: 'unlicensed',
       component: Unlicensed,
     },
-    {
-      path: '/transactbox',
-      name: 'transact',
-      component: Transact_box,
-    },
+
     {
       path: '/prefered',
       name: 'prefered',
-      component: Prefered_pro,
+      component: Preferedpro,
     },
     {
       path: '/estatedev/state',
       name: 'states',
-      component: add_states,
+      component: addstates,
     },
     {
       path: '/estatedev/locations',
       name: 'locations',
-      component: add_locations,
+      component: addlocations,
     },
     {
       path: '/joining',
@@ -275,7 +271,7 @@ export default new Router({
     {
       path: '/estatedev2',
       name: 'estatedev',
-      component: Estate_dev2,
+      component: Estatedev2,
     },
     {
       path: '/market',
@@ -310,27 +306,27 @@ export default new Router({
     {
       path: '/promo',
       name: 'promo',
-      component: Exc_promo,
+      component: Excpromo,
     },
     {
       path: '/siteinsp',
       name: 'siteinsp',
-      component: Site_insp,
+      component: Siteinsp,
     },
     {
       path: '/bizclub',
       name: 'Biz__club',
-      component: Biz__club,
+      component: Bizclub,
     },
     {
       path: '/leaguetable',
       name: 'leaguetable',
-      component: League_table,
+      component: Leaguetable,
     },
     {
       path: '/transferreq',
       name: 'transferreq',
-      component: Transfer_req,
+      component: Transferreq,
     },
     {
       path: '/portfolio',

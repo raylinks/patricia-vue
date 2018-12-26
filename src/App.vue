@@ -12,7 +12,7 @@
 <script>
 import Navbar from './views/Navbar.vue';
 import Footer from './views/Footer.vue';
-import Transact_box from './views/Admin/Transact_box.vue';
+
 
 export default {
   components: {
