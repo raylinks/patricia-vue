@@ -117,43 +117,43 @@
     </div>
 </template>
 <script>
-    import AdminSidebar from './AdminSidebar.vue';
-    import Topbar from './Topbar.vue';
+import AdminSidebar from './AdminSidebar.vue';
+import Topbar from './Topbar.vue';
 
-    import { fetchStates } from '../../config';
-    import { GetLocation } from '../../config';
+import { fetchStates } from '../../config';
+import { GetLocation } from '../../config';
 
-    export default{
-        data() {
-            return {
-                state: {},
-                location: {},
-            };
-        },
-        components: {
-            'side-bar': AdminSidebar,
-            'top-bar': Topbar,
-        },
-        created() {
-            this.getState();
-            this.getLocation();
-        },
-        methods: {
-            getState() {
-                this.$http.get(fetchStates).then(function (response) {
-                    this.state = response.body.data;
-                    // console.log(response);
-                    // this.client= ''
-                });
-            },
-            getLocation() {
-                this.$http.get(GetLocation).then(function (response) {
-                    this.location = response.body.data;
-                    // console.log(response);
-                    // this.client= ''
-                });
-            },
-
-        },
+export default{
+  data() {
+    return {
+      state: {},
+      location: {},
     };
+  },
+  components: {
+    'side-bar': AdminSidebar,
+    'top-bar': Topbar,
+  },
+  created() {
+    this.getState();
+    this.getLocation();
+  },
+  methods: {
+    getState() {
+      this.$http.get(fetchStates).then(function (response) {
+        this.state = response.body.data;
+        // console.log(response);
+        // this.client= ''
+      });
+    },
+    getLocation() {
+      this.$http.get(GetLocation).then(function (response) {
+        this.location = response.body.data;
+        // console.log(response);
+        // this.client= ''
+      });
+    },
+
+  },
+};
 </script>

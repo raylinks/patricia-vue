@@ -107,12 +107,12 @@ export default{
     return {
       formData: {
         state: '',
-          slug:''
+        slug: '',
 
       },
       show: {},
       states: {},
-        submitted: false
+      submitted: false,
     };
   },
   components: {
@@ -124,7 +124,6 @@ export default{
 
     submit() {
       this.$http.post('http://localhost:3000/api/v1/state', this.formData).then(function (response) {
-
         this.submitted = true;
         this.formData = '';
       });

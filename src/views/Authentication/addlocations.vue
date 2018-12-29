@@ -166,54 +166,54 @@
     </div>
 </template>
 <script>
-    import AdminSidebar from './AdminSidebar.vue';
-    import Topbar from './Topbar.vue';
+import AdminSidebar from './AdminSidebar.vue';
+import Topbar from './Topbar.vue';
 
-    import { postLocation } from '../../config';
-    import { fetchStates } from '../../config';
+import { postLocation } from '../../config';
+import { fetchStates } from '../../config';
 
-    export default{
-        name: 'locations',
-        data: () => ({
-            submitted: false,
-            formData: {
-                name:'',
-                state:'',
-                slug:'',
-                plot_size:'',
-                developer:'',
-                amount:'',
-                bonus:''
-            },
-            show: []
-        }),
-        mounted ()  {
-            fetch(fetchStates).then(response => response.json()).then((result) => {
-                this.show = result.data;
-                //console.log(result)
-            });
+export default{
+  name: 'locations',
+  data: () => ({
+    submitted: false,
+    formData: {
+      name: '',
+      state: '',
+      slug: '',
+      plot_size: '',
+      developer: '',
+      amount: '',
+      bonus: '',
+    },
+    show: [],
+  }),
+  mounted() {
+    fetch(fetchStates).then(response => response.json()).then((result) => {
+      this.show = result.data;
+      // console.log(result)
+    });
+  },
+  components: {
+    'side-bar': AdminSidebar,
+    'top-bar': Topbar,
+  },
+  methods: {
+    submit() {
+      console.log(this.show);
+      fetch(postLocation, {
+        method: 'POST',
+        body: JSON.stringify(this.formData),
+        headers: {
+          'content-type': 'application/json',
         },
-        components: {
-            'side-bar': AdminSidebar,
-            'top-bar': Topbar,
-        },
-        methods: {
-            submit() {
-                console.log(this.show);
-                fetch(postLocation, {
-                    method: 'POST',
-                    body: JSON.stringify(this.formData),
-                    headers: {
-                        'content-type': 'application/json',
-                    },
-                }).then(response => response.json()).then((result) => {
-                    console.log(result);
-                    // this.messages.push(result);
-                    this.submitted = true;
-                });
-            },
-        },
-    };
+      }).then(response => response.json()).then((result) => {
+        console.log(result);
+        // this.messages.push(result);
+        this.submitted = true;
+      });
+    },
+  },
+};
 
 
 </script>

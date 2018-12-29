@@ -166,53 +166,53 @@
     </div>
 </template>
 <script>
-    import AdminSidebar from './AdminSidebar.vue';
-    import Topbar from './Topbar.vue';
+import AdminSidebar from './AdminSidebar.vue';
+import Topbar from './Topbar.vue';
 
-    import { postLocation } from '../../config';
-    import { fetchStates } from '../../config';
+import { postLocation } from '../../config';
+import { fetchStates } from '../../config';
 
-    export default{
-        data() {
-            return {
-                formData: {
-                    name:'',
-                    state:'',
-                    slug:'',
-                    plot_size:'',
-                    developer:'',
-                    amount:'',
-                    bonus:''
-                },
-                show: [],
-                submitted: false,
-            };
-        },
-        components: {
-            'side-bar': AdminSidebar,
-            'top-bar': Topbar,
-        },
-        created() {
-            this.getState();
-        },
-        methods: {
-            getState() {
-                let self = this;
-                this.$http.get(fetchStates).then(function (response) {
-                    self.show = response.body.data;
-                    // console.log(response);
-                    this.formData= ''
-                }).catch(function (error) {
-                    console.log(error);
-                });
-            },
-            submit() {
-                this.$http.post(postLocation,  this.formData).then(function (response) {
-                    this.submitted = true;
-                    console.log(response);
-                    formData = '';
-                });
-            },
-        },
+export default{
+  data() {
+    return {
+      formData: {
+        name: '',
+        state: '',
+        slug: '',
+        plot_size: '',
+        developer: '',
+        amount: '',
+        bonus: '',
+      },
+      show: [],
+      submitted: false,
     };
+  },
+  components: {
+    'side-bar': AdminSidebar,
+    'top-bar': Topbar,
+  },
+  created() {
+    this.getState();
+  },
+  methods: {
+    getState() {
+      const self = this;
+      this.$http.get(fetchStates).then(function (response) {
+        self.show = response.body.data;
+        // console.log(response);
+        this.formData = '';
+      }).catch((error) => {
+        console.log(error);
+      });
+    },
+    submit() {
+      this.$http.post(postLocation, this.formData).then(function (response) {
+        this.submitted = true;
+        console.log(response);
+        formData = '';
+      });
+    },
+  },
+};
 </script>
