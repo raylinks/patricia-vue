@@ -172,7 +172,7 @@ import axios from 'axios';
 import Navbar from '../Navbar.vue';
 import Footer from '../Footer.vue';
 
-import { getStates } from '../../config';
+import { fetchStates } from '../../config';
 import { getLocationById } from '../../config';
 
 
@@ -188,7 +188,7 @@ export default{
             	},
             	methods: {
             		getStates() {
-            			 this.$http.get(getStates).then(function (response) {
+            			 this.$http.get(fetchStates).then(function (response) {
         			this.states = response.body.data;
         			// console.log(response);
 						 });

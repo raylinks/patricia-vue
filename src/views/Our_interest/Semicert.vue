@@ -11,10 +11,10 @@
                         <div class="sec-title">
                             <h1>Our<span>Semicert</span></h1>
                             <div class="border-shape"></div>
-                            <h1>Theme => Estate league lounge </h1>
-                            <h1>venue => Estate league lounge </h1>
-                            <h1>Time => Estate league lounge </h1>
-                            <h1>Date=> 30/03/2019 </h1>
+                            <h3>Theme => Estate league launch </h3>
+                            <h3>venue => Estate league launch </h3>
+                            <h3>Time => Estate league launch </h3>
+                            <h3>Date=> 30/03/2019 </h3>
                         </div>
                     </div>
                 </div>

@@ -173,47 +173,46 @@
     import { fetchStates } from '../../config';
 
     export default{
-        name: 'locations',
-        data: () => ({
-            submitted: false,
-            formData: {
-                name:'',
-                state:'',
-                slug:'',
-                plot_size:'',
-                developer:'',
-                amount:'',
-                bonus:''
-            },
-            show: []
-        }),
-        mounted ()  {
-            fetch(fetchStates).then(response => response.json()).then((result) => {
-                this.show = result.data;
-                //console.log(result)
-            });
+        data() {
+            return {
+                formData: {
+                    name:'',
+                    state:'',
+                    slug:'',
+                    plot_size:'',
+                    developer:'',
+                    amount:'',
+                    bonus:''
+                },
+                show: [],
+                submitted: false,
+            };
         },
         components: {
             'side-bar': AdminSidebar,
             'top-bar': Topbar,
         },
+        created() {
+            this.getState();
+        },
         methods: {
+            getState() {
+                let self = this;
+                this.$http.get(fetchStates).then(function (response) {
+                    self.show = response.body.data;
+                    // console.log(response);
+                    this.formData= ''
+                }).catch(function (error) {
+                    console.log(error);
+                });
+            },
             submit() {
-                console.log(this.show);
-                fetch(postLocation, {
-                    method: 'POST',
-                    body: JSON.stringify(this.formData),
-                    headers: {
-                        'content-type': 'application/json',
-                    },
-                }).then(response => response.json()).then((result) => {
-                    console.log(result);
-                    // this.messages.push(result);
+                this.$http.post(postLocation,  this.formData).then(function (response) {
                     this.submitted = true;
+                    console.log(response);
+                    formData = '';
                 });
             },
         },
     };
-
-
 </script>

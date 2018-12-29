@@ -7,7 +7,7 @@
 			<div class="single-slide" style="background-image:url(img/slide1.jpg);">
 				<div class="slider-overlay"></div>
 				<div class="slider-text">
-					<h1>Welcome To T.E.A.M LTD</h1>
+					<h1 >Welcome To T.E.A.M LTD</h1>
 					<p>A marketing outfit with ultimate bias for real estate and investment opportunities.</p>
 					<ul>
 
@@ -15,7 +15,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="single-slide" style="background-image:url(img/slide2.jpg);">
+			<div class="single-slide" style="background-image:url(img/slide1.jpg);">
 				<div class="slider-overlay"></div>
 				<div class="slider-text">
 					<h1>Welcome To T.E.A.M LTD</h1>
@@ -52,7 +52,7 @@
 						<div class="media-body">
 							<h2></h2>
 							<p>TRAINING</p>
-							<a href="service-details.html" class="btn morebutton">Read More...</a>
+							<a href="/#/training" class="btn morebutton">Read More...</a>
 						</div>
 					</div>
 				</div>
@@ -64,7 +64,7 @@
 						<div class="media-body">
 							<h2></h2>
 							<p>ESTATE DEVELOPMENT</p>
-							<a href="service-details.html" class="btn morebutton">Read More</a>
+							<a href="/#/estatedev2" class="btn morebutton">Read More</a>
 						</div>
 					</div>
 				</div>
@@ -76,7 +76,7 @@
 						<div class="media-body">
 							<h2></h2>
 							<p>ARCHLINE</p>
-							<a href="service-details.html" class="btn morebutton">Read More</a>
+							<a href="/#/archline" class="btn morebutton">Read More</a>
 						</div>
 					</div>
 				</div>
@@ -88,7 +88,7 @@
 						<div class="media-body">
 							<h2></h2>
 							<p>PROPERTIES</p>
-							<a href="service-details.html" class="btn morebutton">Read More</a>
+							<a href="/#/properties" class="btn morebutton">Read More</a>
 						</div>
 					</div>
 				</div>

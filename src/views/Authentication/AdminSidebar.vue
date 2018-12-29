@@ -32,7 +32,7 @@
                                 <a href="/#/profile" class="waves-effect"><i class="mdi mdi-layers"></i> <span>Profile </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
 
                             </li>
-                            <span v-if="role ===  'user' ">
+                            <span v-if="role ==  user ">
                             <li class="has_sub">
                                 <a href="/#/market" class="waves-effect"><i class="mdi mdi-layers"></i> <span>Market </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
 
