@@ -116,19 +116,19 @@
 								<div class="col-md-4 col-sm-4 col-xs-12">
 
 									<div class="single-input-field">
-										<h4>Firstname(required) </h4>
+										<h4> Prospective Firstname</h4>
 										<input type="text"  v-model="reg.firstname"/>
 									</div>
 								</div>
 								<div class="col-md-4 col-sm-4 col-xs-12">
 									<div class="single-input-field">
-										<h4>Lastname *</h4>
+										<h4>  Prospective Lastname *</h4>
 										<input type="text" v-model="reg.lastname"/>
 									</div>
 								</div>
 								<div class="col-md-4 col-sm-4 col-xs-12">
 									<div class="single-input-field">
-										<h4>Email</h4>
+										<h4>  Prospective Email</h4>
 										<input type="email" v-model="reg.email"/>
 									</div>
 								</div>
@@ -146,7 +146,7 @@
 								</div>
 								<div class="col-md-4 col-sm-4 col-xs-12">
 									<div class="single-input-field">
-										<h4>Phone</h4>
+										<h4>Mobile number</h4>
 										<input type="text" v-model="reg.phone"/>
 									</div>
 								</div>
