@@ -8,7 +8,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="index.html" class="logo"><i class="mdi mdi-assistant"></i> TEAM</a>
+                        <a href="" class="logo"><i class="mdi mdi-assistant"></i> TEAM</a>
                         <!-- <a href="index.html" class="logo"><img src="assets/images/logo.png" height="24" alt="logo"></a> -->
                     </div>
                 </div>
@@ -19,40 +19,60 @@
 
 
                         <ul>
+
                             <li class="menu-title">Main</li>
 
-                            <li>
-                                <a href="/#/dash" class="waves-effect">
+                            <li >
+                                <a href="/dash"  @click="logout"  class="waves-effect">
+                                    <i class="mdi mdi-airplay"></i>
+                                    <span> Logout<span class="badge badge-pill badge-primary float-right">7</span></span>
+                                </a>
+                            </li>
+
+                             <li>
+                                <a href="/dash"   class="waves-effect">
                                     <i class="mdi mdi-airplay"></i>
                                     <span> Profile<span class="badge badge-pill badge-primary float-right">7</span></span>
                                 </a>
                             </li>
 
+
                             <li class="has_sub">
-                                <a href="/#/profile" class="waves-effect"><i class="mdi mdi-layers"></i> <span>Profile </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <a href="/profile" class="waves-effect"><i class="mdi mdi-layers"></i> <span>Profile </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
 
                             </li>
-                            <span v-if="role ==  user ">
+
                             <li class="has_sub">
-                                <a href="/#/market" class="waves-effect"><i class="mdi mdi-layers"></i> <span>Market </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <a href="/market" class="waves-effect"><i class="mdi mdi-layers"></i> <span>Market </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
 
                             </li>
+
 
                             <li>
-                                <a href="/#/promo" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span>Exclusive promo</span></a>
+                                <a href="/promo" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span>Exclusive promo</span></a>
                             </li>
-                            </span>
+
 
                             <li>
-                                <a href="/#/siteinsp" class="waves-effect"><i class="mdi mdi-bullseye"></i><span>SITE INSP LOG</span></a>
+                                <a href="/siteinsp" class="waves-effect"><i class="mdi mdi-bullseye"></i><span>SITE INSP LOG</span></a>
                             </li>
                              <li>
-                                <a href="/#/portfolio" class="waves-effect"><i class="mdi mdi-table"></i><span>R/E Portfolio</span></a>
+                                <a href="/portfolio" class="waves-effect"><i class="mdi mdi-table"></i><span>R/E Portfolio</span></a>
 
                             </li>
+                             <li>
+                                <a href="/bizclub" class="waves-effect"><i class="mdi mdi-map-marker-multiple"></i><span>BIZ CLUB</span></a>
+                            </li>
+                            <li>
+                                <a href="/leaguetable" class="waves-effect"><i class="mdi mdi-layers"></i><span>LEAGUE TABLE</span></a>
+                            </li>
+                            <li>
+                                <a href="/transferreq" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span>TRANSFER REQ</span></a>
+                            </li>
+
 
                             <li class="has_sub">
-                                <a href="/#/estatedev/state" class="waves-effect"><i class="mdi mdi-layers"></i> <span> Add State </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <a href="/state" class="waves-effect"><i class="mdi mdi-layers"></i> <span> Add State </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <!--<ul class="list-unstyled">-->
                                     <!--<li><a href="advanced-highlight.html">Highlight</a></li>-->
                                     <!--<li><a href="advanced-rating.html">Rating</a></li>-->
@@ -62,7 +82,7 @@
                             </li>
 
                             <li class="has_sub">
-                                <a href="/#/estatedev/locations" class="waves-effect"><i class="mdi mdi-layers"></i> <span> Add Locations </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <a href="/addlocation" class="waves-effect"><i class="mdi mdi-layers"></i> <span> Add Locations </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <!--<ul class="list-unstyled">-->
                                 <!--<li><a href="advanced-highlight.html">Highlight</a></li>-->
                                 <!--<li><a href="advanced-rating.html">Rating</a></li>-->
@@ -70,31 +90,26 @@
                                 <!--<li><a href="advanced-rangeslider.html">Range Slider</a></li>-->
                                 <!--</ul>-->
                             </li>
+                            <li class="has_sub">
+                                <a href="/admindev" class="waves-effect"><i class="mdi mdi-layers"></i> <span> All Estates Dev </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+
+                            </li>
 
 
                             <li>
-                                <a href="/#/bizclub" class="waves-effect"><i class="mdi mdi-map-marker-multiple"></i><span>BIZ CLUB</span></a>
+                                <a href="/role" class="waves-effect"><i class="mdi mdi-gauge"></i><span>Change User Role</span></a>
                             </li>
                             <li>
-                                <a href="/#/leaguetable" class="waves-effect"><i class="mdi mdi-layers"></i><span>LEAGUE TABLE</span></a>
-                            </li>
-                            <li>
-                                <a href="/#/transferreq" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span>TRANSFER REQ</span></a>
-                            </li>
-                            <li>
-                                <a href="/#/role" class="waves-effect"><i class="mdi mdi-gauge"></i><span>Change User Role</span></a>
-                            </li>
-                            <li>
-                                <a href="/#/confirm" class="waves-effect"><i  class="mdi mdi-google-pages"></i><span>Comfirm Inspection</span></a>
+                                <a href="/confirm" class="waves-effect"><i  class="mdi mdi-google-pages"></i><span>Comfirm Inspection</span></a>
                             </li>
                              <li class="has_sub">
-                                <a href="/#/propbuy" class="waves-effect"><i class="mdi mdi-table"></i><span> Property </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <a href="/propbuy" class="waves-effect"><i class="mdi mdi-table"></i><span> Property </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
                             </li>
                             <li>
-                                <a href="/#/clients" class="waves-effect"><i class="mdi mdi-clipboard-outline"></i><span>Our Clients</span></a>
+                                <a href="/clients" class="waves-effect"><i class="mdi mdi-clipboard-outline"></i><span>Our Clients</span></a>
                             </li>
                             <li>
-                                <a href="/#/trading" class="waves-effect"><i class="mdi mdi-clipboard-outline"></i><span>Trade</span></a>
+                                <a href="/trading" class="waves-effect"><i class="mdi mdi-clipboard-outline"></i><span>Trade</span></a>
                             </li>
 
 
@@ -111,29 +126,16 @@
 
 export default{
   data() {
-    const token = localStorage.usertoken;
-    const firstname = localStorage.firstname;
-    const lastname = localStorage.lastname;
-    const email = localStorage.email;
-    const role = localStorage.role;
-    const is_payed = localStorage.is_payed;
-    const returnData = {
-      firstname,
-      lastname,
-      email,
-      role,
-      is_payed,
+    return {
+
     };
-    return returnData;
   },
+
   methods: {
     logout() {
-      localStorage.removeItem('usertoken');
-      localStorage.removeItem('firstname');
-      localStorage.removeItem('lastname');
-      localStorage.removeItem('email');
-      localStorage.removeItem('role');
-      localStorage.removeItem('is_payed');
+      this.$store.dispatch('setToken', null);
+      this.$store.dispatch('setUser', null);
+      this.$router.push({ name: 'home' });
     },
 
   },

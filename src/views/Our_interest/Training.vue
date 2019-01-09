@@ -43,7 +43,7 @@
                             <div class="media-body">
                                 <h2>Our SemiCert</h2>
                                 <p style="text-align:justify">A seminal and concert, mega 2 in 1 combo. It occurs twice yearly.</p>
-                                <a href="/#/semicert" class="btn morebutton">Read More</a>
+                                <a href="/semicert" class="btn morebutton">Read More</a>
                             </div>
                         </div>
                     </div>

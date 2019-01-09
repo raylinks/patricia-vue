@@ -31,7 +31,7 @@
 						<div class="media-body">
 							<h2>Building Design</h2>
 							<p>..................................</p>
-							<a href="/#/building" class="btn morebutton">Read More</a>
+							<a href="/building" class="btn morebutton">Read More</a>
 						</div>
 					</div>
 				</div>
@@ -43,7 +43,7 @@
 						<div class="media-body">
 							<h2>Interior & Exterior Decorations</h2>
 							<p>....................</p>
-							<a href="/#/interior" class="btn morebutton">Read More</a>
+							<a href="/interior" class="btn morebutton">Read More</a>
 						</div>
 					</div>
 				</div>
@@ -55,7 +55,7 @@
 						<div class="media-body">
 							<h2>Site Supervision</h2>
 							<p>..................................</p>
-							<a href="/#/sitesupervision" class="btn morebutton">Read More</a>
+							<a href="/sitesupervision" class="btn morebutton">Read More</a>
 						</div>
 					</div>
 				</div>
@@ -67,7 +67,7 @@
 						<div class="media-body">
 							<h2>3D Visualization</h2>
 							<p>......................................</p>
-							<a href="/#/visualization" class="btn morebutton">Read More</a>
+							<a href="/visualization" class="btn morebutton">Read More</a>
 						</div>
 					</div>
 				</div>
@@ -79,7 +79,7 @@
 						<div class="media-body">
 							<h2>Modelling</h2>
 							<p>..........</p>
-							<a href="/#/modelling" class="btn morebutton">Read More</a>
+							<a href="/modelling" class="btn morebutton">Read More</a>
 						</div>
 					</div>
 				</div>
@@ -91,7 +91,7 @@
 						<div class="media-body">
 							<h2>Land Scaping</h2>
 							<p>.........................</p>
-							<a href="/#/landscaping" class="btn morebutton">Read More</a>
+							<a href="/landscaping" class="btn morebutton">Read More</a>
 						</div>
 					</div>
 				</div>

@@ -69,13 +69,13 @@
 							<h2><a href="#">Enter League</a></h2>
 							<p>Already a Winner?</p><br>
 							<div class="top-nav-login-btn ">
-							<a href="/#/login"  class="booking-button"></i>Login</a>
+							<a href="/login"  class="booking-button">Login</a>
 							</div>
 
 
 							<h2><a href="#">JOIN LEAGUE</a></h2>
 							<p>join & become a winner. Easy!</p><br>
-							<a href="/#/joining" class="booking-button">Join</a>
+							<a href="/joining" class="booking-button">Join</a>
 
 						</div>
 					</div>
@@ -91,47 +91,10 @@
 
 
 						<div class="widget-two">
-							<h1>Recent Post</h1>
+							<h1>Recent News</h1>
 							<div class="all_r_pst">
-								<div class="media">
-									<div class="relative-post">
-										<div class="relative-post-thumb">
-											<img src="img/r1.jpg" alt=""/>
-										</div>
-										<div class="media-body">
-											<div class="single_r_dec">
-												<h3><a href="#">Lorem ipsum dolor sit amet, sapien semper potenti maecenas id velit </a></h3>
-												<p>20 April 2017</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="media">
-									<div class="relative-post">
-										<div class="relative-post-thumb">
-											<img src="img/r2.jpg" alt=""/>
-										</div>
-										<div class="media-body">
-											<div class="single_r_dec">
-												<h3><a href="#">Lorem ipsum dolor sit amet, sapien semper potenti maecenas id velit </a></h3>
-												<p>25 december 2017</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="media">
-									<div class="relative-post">
-										<div class="relative-post-thumb">
-											<img src="img/r3.jpg" alt=""/>
-										</div>
-										<div class="media-body">
-											<div class="single_r_dec">
-												<h3><a href="#">...... </a></h3>
-												<p>12 January 2019</p>
-											</div>
-										</div>
-									</div>
-								</div>
+
+
 							</div>
 						</div>
 					</div>

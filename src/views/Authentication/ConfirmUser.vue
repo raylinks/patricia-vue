@@ -61,7 +61,7 @@
                                                       <td>{{cat.lastname}}</td>
                                                       <td>{{cat.email}}</td>
                                                       <td><button type="button" class="btn btn-info">Confirm</button></td>
-                                                       <td><button><a  :href="`/#/confirm/edit/${cat._id}/`"  type="button" class="btn btn-info">Edit</a></button></td>
+                                                       <td><button><a  :href="`/edit/${cat._id}`"  type="button" class="btn btn-info">Edit</a></button></td>
                                                        <td><button @click="deleteUser(cat._id)" type="button" class="btn btn-info">Delete</button></td>
 
                                                   </tr>

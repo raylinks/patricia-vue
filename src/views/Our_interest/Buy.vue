@@ -35,25 +35,25 @@
 						<div class="col-md-12 message-input">
 							<div class="single-input-field">
 								<h4>Brief Description</h4>
-								<textarea  type="text"  v-model="reg.description" ></textarea>
+								<textarea  type="text"  v-model="formData.description" ></textarea>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12">
 							<div class="single-input-field">
 								<h4>Fullname *</h4>
-								<input v-model="reg.fullname" type="text"/>
+								<input v-model="formData.fullname" type="text"/>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12">
 							<div class="single-input-field">
 								<h4>Your Email *</h4>
-								<input v-model="reg.email" type="email"/>
+								<input v-model="formData.email" type="email"/>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12">
 							<div class="single-input-field">
 								<h4>Phone</h4>
-								<input v-model="reg.phone" type="text"/>
+								<input v-model="formData.phone" type="text"/>
 							</div>
 						</div>
 
@@ -71,20 +71,22 @@
 						<h1>main office</h1>
 						<div class="single-info">
 							<h2>Address</h2>
-							<p>Ikeja</p>
+							<p>Top floor Rear Building, 22 Olufunmilayo street, Dideolu estate, 1st Gate Bus Stop. Ogba Ikeja.</p><br>
+							<p>15, Adeoye Fafore Street, on-george b/stop, off idimu ikotun road, Lagos.</p>
 						</div>
 						<div class="single-info">
 							<h2>Email: </h2>
-							<p>yourdomain@gmail.com</p>
+							<p>support@teamltd.org</p>
 						</div>
 						<div class="single-info">
 							<h2>Phone:</h2>
-							<p>(+45) 123 456 789</p>
+							<p>+2348022430140</p>
 						</div>
 						<div class="single-info">
-							<h2>Skype:</h2>
-							<p>your_skype</p>
+							<h2>Phone 2:</h2>
+							<p>+2348130458323</p>
 						</div>
+
 					</div>
 				</div>
 			</div>
@@ -100,50 +102,40 @@
 import Navbar from '../Navbar.vue';
 import Footer from '../Footer.vue';
 
-
 import { propertyBuy } from '../../config';
 
 export default{
-  name: '',
+  name: 'addstates',
+
   data: () => ({
-    reg: [],
+    trade: [],
+    error: '',
+    seen: true,
     submitted: false,
-    reg: {
+
+    formData: {
       description: '',
       fullname: '',
-      email: '',
-      identity: 'buyer',
       phone: '',
+      email: '',
+      identity: '2',
 
     },
-
   }),
   components: {
-		 'nav-bar': Navbar,
-		  'app-footer': Footer,
+    'nav-bar': Navbar,
+    'app-footer': Footer,
   },
 
-  mounted: () => {
-    fetch(propertyBuy).then(response => response.json()).then((result) => {
-      this.reg = result;
-    });
-  },
   methods: {
-		   submit() {
-		   	console.log(this.reg);
-		   	fetch(API_URL, {
-		 		method: 'POST',
-		   		body: JSON.stringify(this.reg),
-		   		headers: {
-		   			'content-type': 'application/json',
-		   		},
-		   	}).then(response => response.json()).then((result) => {
-		   		console.log(result);
-		   		// this.messages.push(result);
-		   		this.submitted = true;
-		   	}).catch((err) => {
+
+    submit() {
+      this.$http.post(propertyBuy, this.formData).then(function (response) {
+        this.submitted = true;
+        this.formData = '';
+      }).catch((err) => {
         //  console.log(err)
-        this.errors = err.body.errors;
+        this.error = err.body.error;
       });
     },
   },

@@ -17,7 +17,7 @@
                         <div class="herader-topbar-col tobar-rightside center767">
                             <ul>
                                 <li><a href="https://web.facebook.com/Team-LTD-283450735644748/?_rdc=1&_rdr"  target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="https://mobile.twitter.com/Teamltd4"   target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                                 <!--<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>-->
                                 <li><a href="https://www.instagram.com/t.e.a.mltd/"  target="_blank"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
                                 <!--<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>-->
@@ -36,7 +36,9 @@
       <div class="row">
          <div class="col-md-2">
            <div class="logo">
+               <span @click="navigateTo({name:'home'})">
             <a href=""><img src="img/newlogo.jpg" alt=""/></a>
+                   </span>
           </div>
         </div>
         <div class="col-md-10">
@@ -46,16 +48,16 @@
                 <li class="active"><a href="/">Home</a></li>
                   <li><a href="/#">Who we are<i class="fa fa-caret-down"></i></a>
                       <ul>
-                          <li><a href="/#/about">About us</a></li>
-                          <li><a href="/#/">Our Team</a></li>
+                          <li><a href="/about">About us</a></li>
+
                       </ul>
                   </li>
                 <li><a href="/#">What we do<i class="fa fa-caret-down"></i></a>
                     <ul>
-                    <li><a href="/#/estatedev2">Estate development</a></li>
-                    <li><a href="/#/archline">ArchLine</a></li>
-                    <li><a href="/#/properties">Properties</a></li>
-                        <li><a href="/#/training">Training</a></li>
+                    <li><a href="/estate">Estate development</a></li>
+                    <li><a href="/archline">ArchLine</a></li>
+                    <li><a href="/properties">Properties</a></li>
+                        <li><a href="/training">Training</a></li>
 
                   </ul>
                 </li>
@@ -65,7 +67,7 @@
                     <li><a href="/#/dates">Important Dates</a></li>
                   </ul>
                 </li>-->
-                <li><a href="/#/comingsoon">Estate League<i class="fa fa-caret-down"></i></a>
+                <li><a href="/estateleague">Estate League<i class="fa fa-caret-down"></i></a>
                   <!--<ul>
                     <li><a href="/#/enterleague">Enter League</a></li>
 
@@ -73,14 +75,14 @@
                 </li>
                 <li><a href="/#">Inspect Site</a>
                     <ul>
-                        <li><a href="/#/">Videos /images</a></li>
+                        <li><a href="/">Videos /images</a></li>
 
-                    <li><a href="/#/generalinspection">General Inspection</a></li>
-                    <li><a href="/#/privateinspection">Private Inspection</a></li>
+                    <li><a href="/generalinspection">General Inspection</a></li>
+                    <li><a href="/privateinspection">Private Inspection</a></li>
                   </ul>
                 </li>
 
-                <li><a href="/#/contact">Find Us</a></li>
+                <li><a href="/contact">Find Us</a></li>
               </ul>
             </nav>
           </div>
@@ -92,3 +94,17 @@
 
 </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+
+    };
+  },
+  methods: {
+    navigateTo(route) {
+      this.$router.push(route);
+    },
+  },
+};
+</script>

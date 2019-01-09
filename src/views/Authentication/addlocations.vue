@@ -4,7 +4,7 @@
         <div id="wrapper">
 
             <!-- ========== Left Sidebar Start ========== -->
-            <side-bar></side-bar>
+            <!--<side-bar></side-bar>-->
             <!-- Left Sidebar End -->
 
             <!-- Start right Content here -->
@@ -14,7 +14,7 @@
                 <div class="content">
 
                     <!-- Top Bar Start -->
-                    <top-bar></top-bar>
+                    <!--<top-bar></top-bar>-->
                     <!-- Top Bar End -->
 
                     <div class="page-content-wrapper ">
@@ -49,8 +49,8 @@
                                                 You have succesfully added a location......An email has been sent to you
                                             </div>
                                         </div>
-                                        <form @submit.prevent="submit">
-  <span v-if="show != null ">
+                                        <form @submit.prevent="submit" id="locate" enctype="multipart/form-data">
+
                                             <div class="form-group">
                                                 <label>Select State</label>
                                                 <select class="form-control" name="state" v-model="formData.state">
@@ -59,25 +59,25 @@
 
                                                 </select>
                                             </div>
-  </span>
+
                                             <div class="form-group">
                                                 <label>State slug</label>
                                                 <div>
-                                                    <input type="text" name="slug" v-model="formData.slug" class="form-control" required
+                                                    <input type="text" name="slug" v-model="formData.slug" class="form-control"
                                                            data-parsley-min="6" placeholder="Min value is 6"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label>Location Name</label>
                                                 <div>
-                                                    <input type="text" name="name"  v-model="formData.name" class="form-control" required
+                                                    <input type="text" name="name"  v-model="formData.name" class="form-control"
                                                            data-parsley-maxlength="6" placeholder="Max 6 chars."/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label>Developer</label>
                                                 <div>
-                                                    <input type="text" name="deveoper" v-model="formData.developer" class="form-control" required
+                                                    <input type="text" name="deveoper" v-model="formData.developer" class="form-control"
                                                            data-parsley-length="[5,10]"
                                                            placeholder="Text between 5 - 10 chars length"/>
                                                 </div>
@@ -85,54 +85,45 @@
                                             <div class="form-group">
                                                 <label>plot Size</label>
                                                 <div>
-                                                    <input type="text" name="plot_size" v-model="formData.plot_size" class="form-control" required
+                                                    <input type="text" name="plot_size" v-model="formData.plot_size" class="form-control"
                                                            data-parsley-min="6" placeholder="Min value is 6"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label>Amount</label>
                                                 <div>
-                                                    <input type="text" name="amount" v-model="formData.amount" class="form-control" required
+                                                    <input type="text" name="amount" v-model="formData.amount" class="form-control"
                                                            data-parsley-max="6" placeholder="Max value is 6"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label>Bonus</label>
                                                 <div>
-                                                    <input class="form-control" name="amount" v-model="formData.amount" type="text range" min="6"
+                                                    <input class="form-control" name="bonus" v-model="formData.bonus"   type="text range" min="6"
                                                            max="100" placeholder="Number between 6 - 100"/>
                                                 </div>
+                                            </div>
+
+                                            <div v-if="message"  :class="`message ${error ? 'is-danger' : 'is-success'}`">
+                                                <div  class="message-body">{{message}}</div>
                                             </div>
                                             <div class="form-group">
                                                 <label>Upload Image</label>
                                                 <div>
-                                                    <input type="text" class="form-control"
-                                                           data-parsley-pattern="#[A-Fa-f0-9]{6}"
-                                                           placeholder="Hex. Color"/>
+                                                    <input type="file" name="image"  ref="file" class="form-control" @change="imageChanged"
+
+                                                           placeholder="Hex. Color" />
                                                 </div>
                                             </div>
 
-                                            <div class="form-group">
-                                                <label>Min check</label>
-                                                <div>
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck1" data-parsley-multiple="groups"
-                                                               data-parsley-mincheck="2">
-                                                        <label class="custom-control-label" for="customCheck1">And this</label>
-                                                    </div>
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck2" data-parsley-multiple="groups"
-                                                               data-parsley-mincheck="2">
-                                                        <label class="custom-control-label" for="customCheck2">Can't check this</label>
-                                                    </div>
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck3" data-parsley-multiple="groups"
-                                                               data-parsley-mincheck="2">
-                                                        <label class="custom-control-label" for="customCheck3">This too</label>
-                                                    </div>
+                                            <span v-if="file" class="file-name" >{{file.name}}</span>
 
-                                                </div>
-                                            </div>
+
+	<br>
+<h1 class="error" v-html="error" style="color: red;">{{error}}</h1>
+
+<br>
+
 
                                             <div class="form-group m-b-0">
                                                 <div>
@@ -166,27 +157,39 @@
     </div>
 </template>
 <script>
+import axios from 'axios';
 import AdminSidebar from './AdminSidebar.vue';
 import Topbar from './Topbar.vue';
-
 import { postLocation } from '../../config';
 import { fetchStates } from '../../config';
 
 export default{
   name: 'locations',
-  data: () => ({
-    submitted: false,
-    formData: {
-      name: '',
-      state: '',
-      slug: '',
-      plot_size: '',
-      developer: '',
-      amount: '',
-      bonus: '',
-    },
-    show: [],
-  }),
+  // data: () => ({
+  data() {
+    return {
+
+      submitted: false,
+      file: '',
+      //               error:null,
+      formData: {
+        name: '',
+        state: '',
+        slug: '',
+        plot_size: '',
+        developer: '',
+        amount: '',
+        bonus: '',
+        image: '',
+      },
+      show: [],
+
+      message: '',
+      error: false,
+
+
+    };
+  },
   mounted() {
     fetch(fetchStates).then(response => response.json()).then((result) => {
       this.show = result.data;
@@ -198,22 +201,53 @@ export default{
     'top-bar': Topbar,
   },
   methods: {
+    imageChanged(e) {
+      this.file = e.target.files[0];
+      //          var fileReader = new FileReader();
+      //          fileReader.readAsDataURL(e.target.files[0])
+      //
+      //          fileReader.onload = (e)=> {
+      //              this.formData.image = e.target.result
+      //
+      //          }
+      //          console.log(this.formData)
+    },
+    //      imageChanged(){
+    //          this.file =this.$refs.file.files[0];
+    //          this.error =false;
+    //          this.message= ""
+    //
+    //      },
     submit() {
-      console.log(this.show);
-      fetch(postLocation, {
-        method: 'POST',
-        body: JSON.stringify(this.formData),
-        headers: {
-          'content-type': 'application/json',
-        },
-      }).then(response => response.json()).then((result) => {
-        console.log(result);
-        // this.messages.push(result);
-        this.submitted = true;
+      // var form = document.getElementById('locate');
+      // console.log(form)
+      const formData = new FormData();
+      // formData.append('me','me');
+      formData.append('state', this.formData.state);
+      formData.append('slug', this.formData.slug);
+      formData.append('name', this.formData.name);
+      formData.append('plot_size', this.formData.plot_size);
+      formData.append('bonus', this.formData.bonus);
+      formData.append('amount', this.formData.amount);
+      formData.append('image', this.file);
+      formData.append('developer', this.formData.developer);
+      axios.post(postLocation, formData).then(function (response) {
+        console.log(response);
+        this.message = 'file has been uploaded';
+        // this.file="";
+      }).catch(function (err) {
+        this.error = err.body.error;
       });
     },
+
+
   },
 };
 
 
 </script>
+<style scoped>
+.error{
+    color:red;
+}
+</style>

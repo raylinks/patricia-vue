@@ -31,7 +31,7 @@
 						<div class="media-body">
 							<h2>Periodic WorkChop</h2>
 							<p>.................................</p>
-							<a href="service-details.html" class="btn morebutton">Read More</a>
+							<a href="" class="btn morebutton">Read More</a>
 						</div>
 					</div>
 				</div>
@@ -43,7 +43,7 @@
 						<div class="media-body">
 							<h2>Our SemiCert</h2>
 							<p>A seminar and concert, mega 2 in 1 combo. It occurs twice yearly.</p>
-							<a href="service-details.html" class="btn morebutton">Read More</a>
+							<a href="" class="btn morebutton">Read More</a>
 						</div>
 					</div>
 				</div>
@@ -55,7 +55,7 @@
 						<div class="media-body">
 							<h2>Business Club Week</h2>
 							<p>A week set aside in year to further celebrate sales champions who exceeds the  yearly exceptations.It includes the varieties such as all expense trips, exclusive resorts, holiday packages, Ngo meetings, business lectures and networking e.t.c.</p>
-							<a href="service-details.html" class="btn morebutton">Read More</a>
+							<a href="" class="btn morebutton">Read More</a>
 						</div>
 					</div>
 				</div>

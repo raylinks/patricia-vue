@@ -27,6 +27,7 @@
 				<div class="col-md-8">
 					<div class="contact-field">
 						<h2>send us a message</h2>
+						<form @submit.prevent="PostContact">
 						<div class="col-md-4 col-sm-4 col-xs-12">
 							<div class="single-input-field">
 								<h4>Yor name (required) </h4>
@@ -56,6 +57,7 @@
 								<input type="submit" value="send "/>
 							</div>
 						</div>
+						</form>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -102,11 +104,43 @@
 import Navbar from './Navbar.vue';
 import Footer from './Footer.vue';
 
+import { PostContact } from '../config';
+
 export default{
+  name: '',
+  data: () => ({
+    getContact: [],
+    submitted: false,
+    contact: {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+	  error: null,
+
+    },
+
+  }),
   components: {
 		 'nav-bar': Navbar,
 		  'app-footer': Footer,
   },
 
+
+  methods: {
+		   submit() {
+		   	fetch(PostContact, {
+		 		method: 'POST',
+		   		body: JSON.stringify(this.contact),
+		   		headers: {
+		   			'content-type': 'application/json',
+		   		},
+		   	}).then(response => response.json()).then((result) => {
+		   		console.log(result);
+		   		 this.contact.push(result);
+		   		this.submitted = true;
+		   	});
+    },
+  },
 };
 </script>

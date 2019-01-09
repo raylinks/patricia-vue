@@ -55,11 +55,11 @@
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr v-for="cat in show">
+                                                <tr v-for="cat in getBuy">
                                                     <td>1</td>
                                                     <td>{{cat.fullname}}</td>
                                                     <td>{{cat.email}}</td>
-                                                    <td>{{cat.description}}</td>
+                                                    <td></td>
                                                     <td><button type="button" class="btn btn-info">Delete</button></td>
                                                 </tr>
 
@@ -90,11 +90,11 @@
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <tr  v-for="cat in show">
+                                                <tr  v-for="cat in getSell">
                                                     <td></td>
                                                     <td>{{cat.fullname}}</td>
                                                     <td>{{cat.email}}</td>
-                                                    <td>{{cat.description}}</td>
+                                                    <td>{{cat.product}}</td>
                                                     <td><button type="button" class="btn btn-info">Delete</button></td>
 
                                                 </tr>
@@ -125,40 +125,43 @@
     </div>
 </template>
 <script>
-    import AdminSidebar from './AdminSidebar.vue';
-    import Topbar from './Topbar.vue';
+import AdminSidebar from './AdminSidebar.vue';
+import Topbar from './Topbar.vue';
 
-    import { propbuy } from '../../config';
+import { gettradesellers } from '../../config';
+import { getTradeBuyer } from '../../config';
 
-    export default{
-        data() {
-            return {
-                property: {
-                    fullname: '',
-                    email: '',
-                    description: '',
-                },
-                show: {},
-            };
-        },
+export default{
+  name: 'trading',
+  data: () => ({
+    getBuy: {},
+    getSell: {},
 
-        components: {
-            'side-bar': AdminSidebar,
-            'top-bar': Topbar,
-        },
-        created() {
-            this.getProp();
-        },
-        methods: {
-            getProp() {
-                this.$http.get(propbuy)
-                    .then(function (response) {
-                        this.show = response.body.data;
-                        this.property = '';
-                    });
-            },
-        },
+  }),
+
+  methods: {
+    fetchSellers() {
+      this.$http.get(gettradesellers).then((response) => {
+        // console.log(response)
+        this.getSell = response.body.data;
+      });
+    },
+    fetchBuyers() {
+      this.$http.get(getTradeBuyer).then((response) => {
+        // console.log(response)
+        this.getBuy = response.body.data;
+      });
+    },
 
 
-    };
+  },
+  created() {
+    this.fetchBuyers();
+    this.fetchSellers();
+  },
+  components: {
+    'side-bar': AdminSidebar,
+    'top-bar': Topbar,
+  },
+};
 </script>

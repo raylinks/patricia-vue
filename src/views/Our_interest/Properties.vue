@@ -40,7 +40,7 @@
 							<p>Contact properties@teamltd.org</p>
 							<br>
 							<div>
-							<a href="/#/buy" class="booking-button">BUY</a>
+							<a href="/buy" class="booking-button">BUY</a>
 							</div>
 
 
@@ -53,7 +53,7 @@
 							<br>
 
 							<div>
-								<a href="/#/sell" class="booking-button">SELL</a>
+								<a href="/sell" class="booking-button">SELL</a>
 							</div>
 
 						</div>

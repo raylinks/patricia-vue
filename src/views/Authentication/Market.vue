@@ -49,14 +49,14 @@
                             <div class="col-xs-4 fw600">
                                 <div class="about-box">
                                     <i class="zmdi zmdi-network-locked"></i>
-                                    <h4><a href="/#/userbuy">BUY</a></h4>
+                                    <h4><a href="/userbuy">BUY</a></h4>
                                 </div>
                             </div>
 
                             <div class="col-xs-4 fw600">
                                 <div class="about-box">
                                     <i class="zmdi zmdi-thumb-up"></i>
-                                    <h4><a href="/#/usersell">SELL</a></h4>
+                                    <h4><a href="/usersell">SELL</a></h4>
                                 </div>
                             </div>
                         </div>

@@ -11,7 +11,7 @@
 					<p>A marketing outfit with ultimate bias for real estate and investment opportunities.</p>
 					<ul>
 
-						<li><a href="/#/estatedev2">Trade with us</a></li>
+						<li><a href="/buynsell">Trade with us</a></li>
 					</ul>
 				</div>
 			</div>
@@ -21,7 +21,7 @@
 					<h1>Welcome To T.E.A.M LTD</h1>
 					<p>A marketing outfit with ultimate bias for real estate and investment opportunities.</p>
 					<ul>
-						<li><a href="/#/estatedev2">Trade with Us</a></li>
+						<li><a href="/buynsell">Trade with Us</a></li>
 					</ul>
 				</div>
 			</div>
@@ -52,7 +52,7 @@
 						<div class="media-body">
 							<h2></h2>
 							<p>TRAINING</p>
-							<a href="/#/training" class="btn morebutton">Read More...</a>
+							<a href="/training" class="btn morebutton">Read More...</a>
 						</div>
 					</div>
 				</div>
@@ -64,7 +64,7 @@
 						<div class="media-body">
 							<h2></h2>
 							<p>ESTATE DEVELOPMENT</p>
-							<a href="/#/estatedev2" class="btn morebutton">Read More</a>
+							<a href="/estate" class="btn morebutton">Read More</a>
 						</div>
 					</div>
 				</div>
@@ -76,7 +76,7 @@
 						<div class="media-body">
 							<h2></h2>
 							<p>ARCHLINE</p>
-							<a href="/#/archline" class="btn morebutton">Read More</a>
+							<a href="/archline" class="btn morebutton">Read More</a>
 						</div>
 					</div>
 				</div>
@@ -202,7 +202,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="sec-title">
-						<h1>Featured<span>Locations</span></h1>
+						<h2>Featured<span>Locations</span></h2>
 						<div class="border-shape"></div>
 						<p>Here are locations of our estates.</p>
 					</div>
@@ -475,7 +475,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="sec-title">
-						<h1>Property<span>Developers</span></h1>
+						<h2>Property<span>Developers</span></h2>
 						<div class="border-shape"></div>
 						<p></p>
 					</div>

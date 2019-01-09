@@ -9,13 +9,13 @@
                                 <li class="list-inline-item dropdown notification-list hide-phone">
                                     <a class="nav-link dropdown-toggle arrow-none waves-effect text-white" data-toggle="dropdown" href="#" role="button"
                                         aria-haspopup="false" aria-expanded="false">
-                                        English <img src="assets/images/flags/us_flag.jpg" class="ml-2" height="16" alt=""/>
+                                        <img src="assets/images/flags/us_flag.jpg" class="ml-2" height="16" alt=""/>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right language-switch">
-                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/italy_flag.jpg" alt="" height="16"/><span> Italian </span></a>
-                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/french_flag.jpg" alt="" height="16"/><span> French </span></a>
-                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/spain_flag.jpg" alt="" height="16"/><span> Spanish </span></a>
-                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/russia_flag.jpg" alt="" height="16"/><span> Russian </span></a>
+                                        <a class="dropdown-item" href="#"><img src="" alt="" height="16"/><span> Italian </span></a>
+                                        <a class="dropdown-item" href="#"><img src="" alt="" height="16"/><span> French </span></a>
+                                        <a class="dropdown-item" href="#"><img src="" alt="" height="16"/><span> Spanish </span></a>
+                                        <a class="dropdown-item" href="#"><img src="" alt="" height="16"/><span> Russian </span></a>
                                     </div>
                                 </li>
                                 <li class="list-inline-item dropdown notification-list">
@@ -32,7 +32,7 @@
 
                                         <!-- item-->
                                         <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                            <div class="notify-icon"><img src="assets/images/users/avatar-2.jpg" alt="user-img" class="img-fluid rounded-circle" /> </div>
+                                            <div class="notify-icon"><img src="" alt="user-img" class="img-fluid rounded-circle" /> </div>
                                             <p class="notify-details"><b>Charles M. Jones</b><small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
                                         </a>
 
@@ -109,7 +109,7 @@
                                         <a class="dropdown-item" href="#"><span class="badge badge-success float-right">5</span><i class="mdi mdi-settings m-r-5 text-muted"></i> Settings</a>
                                         <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline m-r-5 text-muted"></i> Lock screen</a>
                                         <div class="dropdown-divider"></div>
-                                        <a @click="logout" class="dropdown-item" href="#"><i class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
+                                        <a  @click="logout" class="dropdown-item" href="#"><i class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
                                     </div>
                                 </li>
 
@@ -137,43 +137,22 @@
 	</div>
 </template>
 <script>
-import jwtDecode from 'jwt-decode';
+
 import router from 'router';
 import AdminSidebar from './AdminSidebar.vue';
 import Topbar from './Topbar.vue';
-import EventBus from './EventBus';
-
-EventBus.$on('logged-in', (test) => {
-  console.log(test);
-});
 
 export default{
   data() {
-    const token = localStorage.usertoken;
-    const firstname = localStorage.firstname;
-    const lastname = localStorage.lastname;
-    const email = localStorage.email;
-    const role = localStorage.role;
-    const is_payed = localStorage.is_payed;
-    const returnData = {
-      firstname,
-      lastname,
-      email,
-      role,
-      is_payed,
+    return {
+
     };
-    return returnData;
   },
   methods: {
     logout() {
-      localStorage.removeItem('usertoken');
-      localStorage.removeItem('firstname');
-      localStorage.removeItem('lastname');
-      localStorage.removeItem('email');
-      localStorage.removeItem('role');
-      localStorage.removeItem('is_payed');
-
-      this.$router.push({ name: 'login' });
+      this.$store.dispatch('setToken', null);
+      this.$store.dispatch('setUser', null);
+      this.$router.push({ name: 'home' });
     },
 
   },
@@ -183,10 +162,5 @@ export default{
   },
 
 
-  mounted() {
-    EventBus.$on('logged-in', (status) => {
-      this.auth = status;
-    });
-  },
 };
 </script>

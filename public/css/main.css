@@ -452,14 +452,14 @@ transition: all 0.5s ease-out 0s;background:#424242;color:#fff
 margin: 0 250px 50px;
 text-align: center;
 }
-.sec-title  h1 {
+.sec-title  h2 {
 color: #09be51;
 font-size: 34px;
 font-weight: bold;
 text-transform: uppercase;
 }
 
-.sec-title h1 span {
+.sec-title h2 span {
 color: #424242;
 margin-left: 10px;
 }

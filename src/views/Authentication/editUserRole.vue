@@ -1,6 +1,6 @@
 <template>
     <div>
-
+        <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
         <div id="wrapper">
 
             <!-- ========== Left Sidebar Start ========== -->
@@ -31,7 +31,7 @@
                                                 <li class="breadcrumb-item active">Form Validation</li>
                                             </ol>
                                         </div>
-                                        <h4 class="page-title">Estate development series</h4>
+                                        <h4 class="page-title">Confirm users</h4>
                                     </div>
                                 </div>
                             </div>
@@ -42,32 +42,37 @@
                                     <div class="card m-b-30">
                                         <div class="card-body">
 
-                                            <h4 class="mt-0 header-title">ADD STATE DETAIL</h4>
-                                            <p class="text-muted m-b-30 font-14">Admin panel to to add necedssary info,,note whatever you input here will be showed on the website.</p>
-                                            <div class="row">
-                                                <div class="alert alert-success" v-if="submitted">
-                                                    <button class="close" type="button" data-dismiss="alert" aria-hidden="true">&#215;</button>
-                                                    You have succesfully added a state......An email has been sent to you
-                                                </div>
-                                            </div>
-                                            <form class="" @submit.prevent="submit()">
-                                                <div class="form-group">
-                                                    <label>State</label>
-                                                    <input type="text" class="form-control"  v-model="formData.state"  placeholder="input state name"/>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Slug</label>
-                                                    <input type="text" class="form-control"  v-model="formData.slug"  placeholder="input state name"/>
-                                                </div>
-		<br>
-<h1 class="error" v-html="error" style="color: red;">{{error}}</h1>
+                                            <h4 class="mt-0 header-title">Client users</h4>
+                                            <p class="text-muted m-b-30 font-14"><b>Assign a role to a user.</b></p>
 
-<br>
+                                            <form class="" action="#">
 
+                                                <div class="form-group">
+                                                    <label>Lastname</label>
+                                                    <div>
+                                                        <input v-model="message.lastname" type="text"  disabled  class="form-control"
+                                                               />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>E-Mail</label>
+                                                    <div>
+                                                        <input v-model="message.email" type="email" disabled   class="form-control"
+                                                               />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Select Role</label>
+                                                    <select class="form-control" >
+                                                        <option  value="0" >Select  role for Client</option>
+                                                        <option v-for="cat in role"  :value="cat.name">{{cat.name}}</option>
+
+                                                    </select>
+                                                </div>
                                                 <div class="form-group">
                                                     <div>
                                                         <button type="submit" class="btn btn-primary waves-effect waves-light">
-                                                            Submit
+                                                            Update
                                                         </button>
                                                         <button type="reset" class="btn btn-secondary waves-effect m-l-5">
                                                             Cancel
@@ -79,18 +84,16 @@
                                         </div>
                                     </div>
                                 </div> <!-- end col -->
-
-
                             </div> <!-- end row -->
 
                         </div><!-- container -->
 
-                    </div> <!-- Page content Wrapper -->
+                    </div>
 
                 </div> <!-- content -->
 
                 <footer class="footer">
-                    © 2018.
+                    © 2018 Annex by Mannatthemes.
                 </footer>
 
             </div>
@@ -103,39 +106,47 @@
 import AdminSidebar from './AdminSidebar.vue';
 import Topbar from './Topbar.vue';
 
-import { postStates } from '../../config';
+import { confirmUser } from '../../config';
+import { getRoles } from '../../config';
 
 export default{
-  name: 'addstates',
-
+  name: 'editRole',
   data: () => ({
-    trade: [],
-    error: '',
-    seen: true,
-    submitted: false,
-
-    formData: {
-      statee: '',
-      slug: '',
-
-    },
+    message: {},
+    role: {},
+    editing: false,
   }),
+
+  methods: {
+    edit() {
+      this.$http.get(`http://localhost:3000/api/v1/users/${this.$route.params._id}`).then((response) => {
+        // console.log(response)
+        this.message = response.body.data;
+      });
+    },
+    fetchRoles() {
+      this.$http.get(getRoles).then((response) => {
+        // console.log(response)
+        this.role = response.body.data;
+      });
+    },
+
+    updateUser() {
+      this.editing = true;
+      this.$http.post(`http://localhost:3000/api/v1/users/${this.$route.params._id}`).then((response) => {
+        //                    this.message = response.data;
+        //                    this.message = '';
+        console.log(response);
+      });
+    },
+  },
+  created() {
+    this.edit();
+    this.fetchRoles();
+  },
   components: {
     'side-bar': AdminSidebar,
     'top-bar': Topbar,
-  },
-
-  methods: {
-
-    submit() {
-      this.$http.post(postStates, this.formData).then(function (response) {
-        this.submitted = true;
-        this.formData = '';
-      }).catch((err) => {
-        //  console.log(err)
-        this.error = err.body.error;
-      });
-    },
   },
 };
 </script>

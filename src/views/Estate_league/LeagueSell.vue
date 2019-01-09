@@ -84,7 +84,7 @@
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 						<div class="single-field">
-							<h4>Allocatipon Date</h4>
+							<h4>Allocation Date</h4>
 							<div class="select-arrow">
 								<input type="date"  size="30" disabled>
 

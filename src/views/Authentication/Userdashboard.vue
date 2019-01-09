@@ -26,8 +26,8 @@
                                     <div class="page-title-box">
                                         <div class="btn-group float-right">
                                             <ol class="breadcrumb hide-phone p-0 m-0">
-                                                <li class="breadcrumb-item"><a href="#">{{email}}</a></li>
-                                                <li class="breadcrumb-item active">{{firstname}}</li>
+                                                <li class="breadcrumb-item"><a href="#"></a></li>
+                                                <li class="breadcrumb-item active"></li>
                                             </ol>
                                         </div>
                                         <h4 class="page-title"></h4>
@@ -263,20 +263,9 @@ EventBus.$on('logged-in', (test) => {
 
 export default{
   data() {
-    const token = localStorage.usertoken;
-    const firstname = localStorage.firstname;
-    const lastname = localStorage.lastname;
-    const email = localStorage.email;
-    const role = localStorage.role;
-    const is_payed = localStorage.is_payed;
-    const returnData = {
-      firstname,
-      lastname,
-      email,
-      role,
-      is_payed,
+    return {
+
     };
-    return returnData;
   },
   methods: {
     logout() {

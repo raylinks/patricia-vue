@@ -56,13 +56,13 @@
                                                   </tr>
                                                 </thead>
                                                 <tbody>
-                                                   <tr v-for="cat in messages" >
+                                                   <tr v-for="cat in user" >
                                                       <td>1</td>
                                                       <td>{{cat.firstname}}</td>
                                                       <td>{{cat.lastname}}</td>
                                                       <td>{{cat.email}}</td>
                                                       <td></td>
-                                                      <td><button type="button" class="btn btn-info">Change Role</button></td>
+                                                       <td><button><a  :href="`/edit/${cat._id}/edit`" class="btn btn-info">Change Role</a></button></td>
                                                   </tr>
 
                                                 </tbody>
@@ -95,19 +95,29 @@ import Topbar from './Topbar.vue';
 import { userRole } from '../../config';
 
 export default{
-  name: 'role',
-  data: () => ({
-    messages: [],
-  }),
-  mounted() {
-    fetch(API_URL).then(response => response.json()).then((result) => {
-      // console.log(result);
-      this.messages = result.data;
-    });
+  data() {
+    return {
+      user: {},
+      location: {},
+    };
   },
   components: {
     'side-bar': AdminSidebar,
     'top-bar': Topbar,
+  },
+  created() {
+    this.getUsers();
+  },
+  methods: {
+    getUsers() {
+      this.$http.get(userRole).then(function (response) {
+        this.user = response.body.data;
+        // console.log(response);
+        // this.client= ''
+      });
+    },
+
+
   },
 };
 </script>
