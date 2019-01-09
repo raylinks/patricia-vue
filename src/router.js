@@ -4,7 +4,7 @@ import Router from 'vue-router';
 
 import Home from './views/Home.vue';
 
-import Contactus from './views/Contactus.vue';
+import ContactUs from './views/ContactUs.vue';
 import Reg from './views/Authentication/Reg.vue';
 import Login from './views/Authentication/Login.vue';
 import ForgetPassword from './views/Authentication/ForgetPassword.vue';
@@ -28,7 +28,7 @@ import Properties from './views/Our_interest/Properties.vue';
 import Overview from './views/Business_club/Overview.vue';
 import About from './views/Who_we_are/About.vue';
 import Importantdate from './views/Business_club/Importantdate.vue';
-import Enterleague from './views/Estate_league/Enterleague.vue';
+import EnterLeague from './views/Estate_league/EnterLeague.vue';
 import Joinleague from './views/Estate_league/Joinleague.vue';
 import Generalinspec from './views/Site_inspection/Generalinspec.vue';
 import Videos from './views/Site_inspection/Videos.vue';
@@ -56,15 +56,15 @@ import Transferreq from './views/Authentication/Transferreq.vue';
 import Portfolio from './views/Authentication/Portfolio.vue';
 import Userbuy from './views/Authentication/Userbuy.vue';
 import Usersell from './views/Authentication/Usersell.vue';
-import Tradebuy from './views/Trade/Tradebuy.vue';
-import Tradesell from './views/Trade/Tradesell.vue';
+import TradeBuy from './views/Trade/TradeBuy.vue';
+import TradeSell from './views/Trade/TradeSell.vue';
 import GetTrade from './views/Authentication/GetTrade.vue';
-import Buynsell from './views/Trade/Buynsell.vue';
+import Buynsell from './views/Trade/BuynSell.vue';
 import PropBuy from './views/Authentication/PropBuy.vue';
 import addstates from './views/Authentication/addstates.vue';
 import addlocations from './views/Authentication/addlocations.vue';
 import tradeWithUs from './views/Trade/tradeWithUs.vue';
-import Estateleague from './views/Estate_league/Estateleague.vue';
+import EstateLeague from './views/Estate_league/EstateLeague.vue';
 import Training from './views/Our_interest/Training.vue';
 
 
@@ -116,7 +116,7 @@ export default new Router({
     {
       path: '/contact',
       name: 'contact',
-      component: Contactus,
+      component: ContactUs,
     },
     // {
     //   path: '/about',
@@ -194,7 +194,7 @@ export default new Router({
     {
       path: '/enterleague',
       name: 'enterleague',
-      component: Enterleague,
+      component: EnterLeague,
     },
     {
       path: '/joinleague',
@@ -360,7 +360,7 @@ export default new Router({
     {
       path: '/tradesell',
       name: 'tradesell',
-      component: Tradesell,
+      component: TradeSell,
     },
     {
       path: '/trading',
@@ -370,7 +370,7 @@ export default new Router({
     {
       path: '/tradebuy',
       name: 'tradebuy',
-      component: Tradebuy,
+      component: TradeBuy,
     },
     {
       path: '/buynsell',
@@ -390,7 +390,7 @@ export default new Router({
     {
       path: '/estateleague',
       name: 'cestateleague',
-      component: Estateleague,
+      component: EstateLeague,
     },
     {
       path: '/videos',

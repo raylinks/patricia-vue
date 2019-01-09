@@ -136,7 +136,7 @@
 
 								<div class="col-md-4 col-sm-4 col-xs-12">
 									<div class="single-input-field">
-										<h4>Phone</h4>
+										<h4>Mobile number</h4>
 										<input v-model="reg.phone" type="text"/>
 									</div>
 								</div>
