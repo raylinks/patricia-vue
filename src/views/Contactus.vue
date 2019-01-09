@@ -1,6 +1,6 @@
 <template>
 <div>
-	<nav-bar v-if="this.$route.path !== '/dash'"></nav-bar>
+	<nav-bar></nav-bar>
 <!-- Page Heading Section Start -->
 	<div class="pagehding-sec">
 		<div class="images-overlay"></div>
@@ -10,7 +10,7 @@
 					<div class="page-heading">
 						<h1>Contact Us</h1>
 						<ul>
-							<li><a href="index-2.html">Home</a></li>
+							<li><a href="">Home</a></li>
 							<li><a href="#">Contact Us</a></li>
 						</ul>
 					</div>
@@ -74,7 +74,7 @@
 						</div>
 						<div class="single-info">
 							<h2>Phone:</h2>
-							<p>+2348022430140</p>
+							<p>+2348022430140.</p>
 						</div>
 
 					</div>
