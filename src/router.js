@@ -4,7 +4,7 @@ import Router from 'vue-router';
 
 import Home from './views/Home.vue';
 
-import ContactUs from './views/ContactUs.vue';
+import ContactUs from './views/Contactus.vue';
 import Reg from './views/Authentication/Reg.vue';
 import Login from './views/Authentication/Login.vue';
 import ForgetPassword from './views/Authentication/ForgetPassword.vue';
@@ -28,7 +28,7 @@ import Properties from './views/Our_interest/Properties.vue';
 import Overview from './views/Business_club/Overview.vue';
 import About from './views/Who_we_are/About.vue';
 import Importantdate from './views/Business_club/Importantdate.vue';
-import EnterLeague from './views/Estate_league/EnterLeague.vue';
+import EnterLeague from './views/Estate_league/Enterleague.vue';
 import Joinleague from './views/Estate_league/Joinleague.vue';
 import Generalinspec from './views/Site_inspection/Generalinspec.vue';
 import Videos from './views/Site_inspection/Videos.vue';
@@ -64,7 +64,7 @@ import PropBuy from './views/Authentication/PropBuy.vue';
 import addstates from './views/Authentication/addstates.vue';
 import addlocations from './views/Authentication/addlocations.vue';
 import tradeWithUs from './views/Trade/tradeWithUs.vue';
-import EstateLeague from './views/Estate_league/EstateLeague.vue';
+import EstateLeague from './views/Estate_league/Estateleague.vue';
 import Training from './views/Our_interest/Training.vue';
 
 
