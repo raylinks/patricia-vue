@@ -36,7 +36,7 @@
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="sec-title">
-                            <h1>Pre Season Promo Valid till feb 28 2019</h1>
+                            <h1>Pre Season Promo Valid till 28/02/2019.</h1>
                             <div class="room-info">
 
                                 <p style="color:green;">click here to participate in the promo season</p>

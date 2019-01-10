@@ -1,253 +1,256 @@
 <template>
     <div>
 
-        <div id="wrapper">
+        <side-bar></side-bar>
+        <top-bar></top-bar>
+        <section id="middle">
 
-            <!-- ========== Left Sidebar Start ========== -->
-            <!--<side-bar></side-bar>-->
-            <!-- Left Sidebar End -->
 
-            <!-- Start right Content here -->
+            <!-- page title -->
+            <header id="page-header">
+                <h1>Form Validate</h1>
+                <ol class="breadcrumb">
+                    <li><a href="#">Forms</a></li>
+                    <li class="active">Form Validate</li>
+                </ol>
+            </header>
+            <!-- /page title -->
 
-            <div class="content-page">
-                <!-- Start content -->
-                <div class="content">
 
-                    <!-- Top Bar Start -->
-                    <!--<top-bar></top-bar>-->
-                    <!-- Top Bar End -->
+            <div id="content" class="padding-20">
 
-                    <div class="page-content-wrapper ">
+                <div class="row">
 
-                        <div class="container-fluid">
+                    <div class="col-md-6">
 
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="page-title-box">
-                                        <div class="btn-group float-right">
-                                            <ol class="breadcrumb hide-phone p-0 m-0">
-                                                <li class="breadcrumb-item"><a href="#">Annex</a></li>
-                                                <li class="breadcrumb-item"><a href="#">Forms</a></li>
-                                                <li class="breadcrumb-item active">Form Validation</li>
-                                            </ol>
-                                        </div>
-                                        <h4  style="color:red;" class="page-title">Estate development series</h4>
-                                    </div>
-                                </div>
+                        <!-- ------ -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-transparent">
+                                <strong>FORM VALIDATION</strong>
                             </div>
-                            <!-- end page title end breadcrumb -->
 
-                            <div class="col-lg-6">
-                                <div class="card m-b-30">
-                                    <div class="card-body">
+                            <div class="panel-body">
 
-                                        <h4 class="mt-0 header-title">ADD LOCATION DETAILS</h4>
-                                        <p class="text-muted m-b-30 font-14">Admin panel to to add necedssary info,,note whatever you input here will be showed on the website..</p>
+                                <form class="validate" action="php/contact.php" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
+                                    <fieldset>
+                                        <!-- required [php action request] -->
+                                        <input type="hidden" name="action" value="contact_send" />
+
                                         <div class="row">
-                                            <div class="alert alert-success" v-if="submitted">
-                                                <button class="close" type="button" data-dismiss="alert" aria-hidden="true">&#215;</button>
-                                                You have succesfully added a location......An email has been sent to you
+                                            <div class="form-group">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <label>First Name *</label>
+                                                    <input type="text" name="contact[first_name]" value="" class="form-control required">
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <label>Last Name *</label>
+                                                    <input type="text" name="contact[last_name]" value="" class="form-control required">
+                                                </div>
                                             </div>
                                         </div>
-                                        <form @submit.prevent="submit" id="locate" enctype="multipart/form-data">
 
+                                        <div class="row">
                                             <div class="form-group">
-                                                <label>Select State</label>
-                                                <select class="form-control" name="state" v-model="formData.state">
-                                                    <option  value="0" >Select  state</option>
-                                                    <option v-for="cat in show"  v-bind:value="cat.slug">{{cat.state}}</option>
-
-                                                </select>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label>State slug</label>
-                                                <div>
-                                                    <input type="text" name="slug" v-model="formData.slug" class="form-control"
-                                                           data-parsley-min="6" placeholder="Min value is 6"/>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <label>Email *</label>
+                                                    <input type="email" name="contact[email]" value="" class="form-control required">
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <label>Phone *</label>
+                                                    <input type="text" name="contact[phone]" value="" class="form-control required">
                                                 </div>
                                             </div>
+                                        </div>
+
+                                        <div class="row">
                                             <div class="form-group">
-                                                <label>Location Name</label>
-                                                <div>
-                                                    <input type="text" name="name"  v-model="formData.name" class="form-control"
-                                                           data-parsley-maxlength="6" placeholder="Max 6 chars."/>
+                                                <div class="col-md-12 col-sm-12">
+                                                    <label>Position *</label>
+                                                    <select name="contact[position]" class="form-control pointer required">
+                                                        <option value="">--- Select ---</option>
+                                                        <option value="Marketing">PR &amp; Marketing</option>
+                                                        <option value="Developer">Web Developer</option>
+                                                        <option value="php">PHP Programmer</option>
+                                                        <option value="Javascript">Javascript Programmer</option>
+                                                    </select>
                                                 </div>
                                             </div>
+                                        </div>
+
+                                        <div class="row">
                                             <div class="form-group">
-                                                <label>Developer</label>
-                                                <div>
-                                                    <input type="text" name="deveoper" v-model="formData.developer" class="form-control"
-                                                           data-parsley-length="[5,10]"
-                                                           placeholder="Text between 5 - 10 chars length"/>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <label>Expected Salary *</label>
+                                                    <input type="text" name="contact[expected_salary]" value="" class="form-control required">
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <label>Start Date *</label>
+                                                    <input type="text" name="contact[start_date]" value="" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
                                                 </div>
                                             </div>
+                                        </div>
+
+                                        <div class="row">
                                             <div class="form-group">
-                                                <label>plot Size</label>
-                                                <div>
-                                                    <input type="text" name="plot_size" v-model="formData.plot_size" class="form-control"
-                                                           data-parsley-min="6" placeholder="Min value is 6"/>
+                                                <div class="col-md-12 col-sm-12">
+                                                    <label>Experience *</label>
+                                                    <textarea name="contact[experience]" rows="4" class="form-control required"></textarea>
                                                 </div>
                                             </div>
+                                        </div>
+
+                                        <div class="row">
                                             <div class="form-group">
-                                                <label>Amount</label>
-                                                <div>
-                                                    <input type="text" name="amount" v-model="formData.amount" class="form-control"
-                                                           data-parsley-max="6" placeholder="Max value is 6"/>
+                                                <div class="col-md-12 col-sm-12">
+                                                    <label>
+                                                        Website
+                                                        <small class="text-muted">- optional</small>
+                                                    </label>
+                                                    <input type="text" name="contact[website]" placeholder="http://" class="form-control">
                                                 </div>
                                             </div>
+                                        </div>
+
+                                        <div class="row">
                                             <div class="form-group">
-                                                <label>Bonus</label>
-                                                <div>
-                                                    <input class="form-control" name="bonus" v-model="formData.bonus"   type="text range" min="6"
-                                                           max="100" placeholder="Number between 6 - 100"/>
+                                                <div class="col-md-12">
+                                                    <label>
+                                                        File Attachment
+                                                        <small class="text-muted">Curriculum Vitae - optional</small>
+                                                    </label>
+
+                                                    <!-- custom file upload -->
+                                                    <div class="fancy-file-upload fancy-file-primary">
+                                                        <i class="fa fa-upload"></i>
+                                                        <input type="file" class="form-control" name="contact[attachment]" onchange="jQuery(this).next('input').val(this.value);" />
+                                                        <input type="text" class="form-control" placeholder="no file selected" readonly="" />
+                                                        <span class="button">Choose File</span>
+                                                    </div>
+                                                    <small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
+
                                                 </div>
                                             </div>
+                                        </div>
 
-                                            <div v-if="message"  :class="`message ${error ? 'is-danger' : 'is-success'}`">
-                                                <div  class="message-body">{{message}}</div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Upload Image</label>
-                                                <div>
-                                                    <input type="file" name="image"  ref="file" class="form-control" @change="imageChanged"
+                                    </fieldset>
 
-                                                           placeholder="Hex. Color" />
-                                                </div>
-                                            </div>
-
-                                            <span v-if="file" class="file-name" >{{file.name}}</span>
-
-
-	<br>
-<h1 class="error" v-html="error" style="color: red;">{{error}}</h1>
-
-<br>
-
-
-                                            <div class="form-group m-b-0">
-                                                <div>
-                                                    <button type="submit" class="btn btn-primary waves-effect waves-light">
-                                                        Submit
-                                                    </button>
-                                                    <button type="reset" class="btn btn-secondary waves-effect m-l-5">
-                                                        Cancel
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
-
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn btn-3d btn-teal btn-xlg btn-block margin-top-30">
+                                                SEND APPLICATION
+                                                <span class="block font-lato">We'll get back to you within 48 hours</span>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-                            </div> <!-- end col -->
-                        </div><!-- container -->
 
-                    </div> <!-- Page content Wrapper -->
+                                </form>
 
-                </div> <!-- content -->
+                            </div>
 
-                <footer class="footer">
-                    © 2018 Annex by Mannatthemes.
-                </footer>
+                        </div>
+                        <!-- /----- -->
 
+                    </div>
+                </div>
             </div>
-            <!-- End Right content here -->
-
-        </div>
+        </section>
     </div>
 </template>
 <script>
-import axios from 'axios';
-import AdminSidebar from './AdminSidebar.vue';
-import Topbar from './Topbar.vue';
-import { postLocation } from '../../config';
-import { fetchStates } from '../../config';
+    import AdminSidebar from './AdminSidebar.vue';
+    import Topbar from './Topbar.vue';
+    import axios from 'axios';
+    import { postLocation } from '../../config';
+    import { fetchStates } from '../../config';
 
-export default{
-  name: 'locations',
-  // data: () => ({
-  data() {
-    return {
+    export default{
+        name: 'locations',
+        //data: () => ({
+        data: function () {
+            return {
 
-      submitted: false,
-      file: '',
-      //               error:null,
-      formData: {
-        name: '',
-        state: '',
-        slug: '',
-        plot_size: '',
-        developer: '',
-        amount: '',
-        bonus: '',
-        image: '',
-      },
-      show: [],
+                submitted: false,
+                file:"",
+//               error:null,
+                formData: {
+                    name: '',
+                    state: '',
+                    slug: '',
+                    plot_size: '',
+                    developer: '',
+                    amount: '',
+                    bonus: '',
+                    image: ''
+                },
+                show: [],
 
-      message: '',
-      error: false,
+                message:"",
+                error:false
 
 
+            }
+        },
+        mounted() {
+            fetch(fetchStates).then(response => response.json()).then((result) => {
+                this.show = result.data;
+                // console.log(result)
+            });
+        },
+        components: {
+            'side-bar': AdminSidebar,
+            'top-bar': Topbar,
+
+        },
+        methods: {
+            imageChanged(e){
+                this.file = e.target.files[0];
+//          var fileReader = new FileReader();
+//          fileReader.readAsDataURL(e.target.files[0])
+//
+//          fileReader.onload = (e)=> {
+//              this.formData.image = e.target.result
+//
+//          }
+//          console.log(this.formData)
+
+            },
+//      imageChanged(){
+//          this.file =this.$refs.file.files[0];
+//          this.error =false;
+//          this.message= ""
+//
+//      },
+            submit() {
+                //var form = document.getElementById('locate');
+                //console.log(form)
+                const formData = new FormData();
+                //formData.append('me','me');
+                formData.append('state',this.formData.state)
+                formData.append('slug',this.formData.slug)
+                formData.append('name',this.formData.name)
+                formData.append('plot_size',this.formData.plot_size)
+                formData.append('bonus',this.formData.bonus)
+                formData.append('amount',this.formData.amount)
+                formData.append('image',this.file)
+                formData.append('developer',this.formData.developer)
+                axios.post(postLocation, formData ).then(function(response){
+                    console.log(response);
+                    this.message="file has been uploaded";
+                    // this.file="";
+
+                }).catch(function(err){
+                    this.error = err.body.error;
+                })
+            },
+
+
+        },
     };
-  },
-  mounted() {
-    fetch(fetchStates).then(response => response.json()).then((result) => {
-      this.show = result.data;
-      // console.log(result)
-    });
-  },
-  components: {
-    'side-bar': AdminSidebar,
-    'top-bar': Topbar,
-  },
-  methods: {
-    imageChanged(e) {
-      this.file = e.target.files[0];
-      //          var fileReader = new FileReader();
-      //          fileReader.readAsDataURL(e.target.files[0])
-      //
-      //          fileReader.onload = (e)=> {
-      //              this.formData.image = e.target.result
-      //
-      //          }
-      //          console.log(this.formData)
-    },
-    //      imageChanged(){
-    //          this.file =this.$refs.file.files[0];
-    //          this.error =false;
-    //          this.message= ""
-    //
-    //      },
-    submit() {
-      // var form = document.getElementById('locate');
-      // console.log(form)
-      const formData = new FormData();
-      // formData.append('me','me');
-      formData.append('state', this.formData.state);
-      formData.append('slug', this.formData.slug);
-      formData.append('name', this.formData.name);
-      formData.append('plot_size', this.formData.plot_size);
-      formData.append('bonus', this.formData.bonus);
-      formData.append('amount', this.formData.amount);
-      formData.append('image', this.file);
-      formData.append('developer', this.formData.developer);
-      axios.post(postLocation, formData).then(function (response) {
-        console.log(response);
-        this.message = 'file has been uploaded';
-        // this.file="";
-      }).catch(function (err) {
-        this.error = err.body.error;
-      });
-    },
-
-
-  },
-};
 
 
 </script>
 <style scoped>
-.error{
-    color:red;
-}
+    .error{
+        color:red;
+    }
 </style>

@@ -1,123 +1,221 @@
 <template>
 	<div>
-		 <div class="left side-menu">
-                <button type="button" class="button-menu-mobile button-menu-mobile-topbar open-left waves-effect">
-                    <i class="ion-close"></i>
-                </button>
+        <aside id="aside">
+            <!--
+                Always open:
+                <li class="active alays-open">
 
-                <!-- LOGO -->
-                <div class="topbar-left">
-                    <div class="text-center">
-                        <a href="" class="logo"><i class="mdi mdi-assistant"></i> TEAM</a>
-                        <!-- <a href="index.html" class="logo"><img src="assets/images/logo.png" height="24" alt="logo"></a> -->
-                    </div>
-                </div>
-
-                <div class="sidebar-inner slimscrollleft">
-
-                    <div id="sidebar-menu">
-
-
-                        <ul>
-
-                            <li class="menu-title">Main</li>
-
-                            <li >
-                                <a href="/dash"  @click="logout"  class="waves-effect">
-                                    <i class="mdi mdi-airplay"></i>
-                                    <span> Logout<span class="badge badge-pill badge-primary float-right">7</span></span>
-                                </a>
-                            </li>
-
-                             <li>
-                                <a href="/dash"   class="waves-effect">
-                                    <i class="mdi mdi-airplay"></i>
-                                    <span> Profile<span class="badge badge-pill badge-primary float-right">7</span></span>
-                                </a>
-                            </li>
-
-
-                            <li class="has_sub">
-                                <a href="/profile" class="waves-effect"><i class="mdi mdi-layers"></i> <span>Profile </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-
-                            </li>
-
-                            <li class="has_sub">
-                                <a href="/market" class="waves-effect"><i class="mdi mdi-layers"></i> <span>Market </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-
-                            </li>
-
-
-                            <li>
-                                <a href="/promo" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span>Exclusive promo</span></a>
-                            </li>
-
-
-                            <li>
-                                <a href="/siteinsp" class="waves-effect"><i class="mdi mdi-bullseye"></i><span>SITE INSP LOG</span></a>
-                            </li>
-                             <li>
-                                <a href="/portfolio" class="waves-effect"><i class="mdi mdi-table"></i><span>R/E Portfolio</span></a>
-
-                            </li>
-                             <li>
-                                <a href="/bizclub" class="waves-effect"><i class="mdi mdi-map-marker-multiple"></i><span>BIZ CLUB</span></a>
-                            </li>
-                            <li>
-                                <a href="/leaguetable" class="waves-effect"><i class="mdi mdi-layers"></i><span>LEAGUE TABLE</span></a>
-                            </li>
-                            <li>
-                                <a href="/transferreq" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span>TRANSFER REQ</span></a>
-                            </li>
-
-
-                            <li class="has_sub">
-                                <a href="/state" class="waves-effect"><i class="mdi mdi-layers"></i> <span> Add State </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-                                <!--<ul class="list-unstyled">-->
-                                    <!--<li><a href="advanced-highlight.html">Highlight</a></li>-->
-                                    <!--<li><a href="advanced-rating.html">Rating</a></li>-->
-                                    <!--<li><a href="advanced-alertify.html">Alertify</a></li>-->
-                                    <!--<li><a href="advanced-rangeslider.html">Range Slider</a></li>-->
-                                <!--</ul>-->
-                            </li>
-
-                            <li class="has_sub">
-                                <a href="/addlocation" class="waves-effect"><i class="mdi mdi-layers"></i> <span> Add Locations </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-                                <!--<ul class="list-unstyled">-->
-                                <!--<li><a href="advanced-highlight.html">Highlight</a></li>-->
-                                <!--<li><a href="advanced-rating.html">Rating</a></li>-->
-                                <!--<li><a href="advanced-alertify.html">Alertify</a></li>-->
-                                <!--<li><a href="advanced-rangeslider.html">Range Slider</a></li>-->
-                                <!--</ul>-->
-                            </li>
-                            <li class="has_sub">
-                                <a href="/admindev" class="waves-effect"><i class="mdi mdi-layers"></i> <span> All Estates Dev </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-
-                            </li>
-
-
-                            <li>
-                                <a href="/role" class="waves-effect"><i class="mdi mdi-gauge"></i><span>Change User Role</span></a>
-                            </li>
-                            <li>
-                                <a href="/confirm" class="waves-effect"><i  class="mdi mdi-google-pages"></i><span>Comfirm Inspection</span></a>
-                            </li>
-                             <li class="has_sub">
-                                <a href="/propbuy" class="waves-effect"><i class="mdi mdi-table"></i><span> Property </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-                            </li>
-                            <li>
-                                <a href="/clients" class="waves-effect"><i class="mdi mdi-clipboard-outline"></i><span>Our Clients</span></a>
-                            </li>
-                            <li>
-                                <a href="/trading" class="waves-effect"><i class="mdi mdi-clipboard-outline"></i><span>Trade</span></a>
-                            </li>
-
-
+                LABELS:
+                    <span class="label label-danger pull-right">1</span>
+                    <span class="label label-default pull-right">1</span>
+                    <span class="label label-warning pull-right">1</span>
+                    <span class="label label-success pull-right">1</span>
+                    <span class="label label-info pull-right">1</span>
+            -->
+            <nav id="sideNav"><!-- MAIN MENU -->
+                <ul class="nav nav-list">
+                    <li><!-- dashboard -->
+                        <a class="dashboard" href="index.html"><!-- warning - url used by default by ajax (if eneabled) -->
+                            <i class="main-icon fa fa-dashboard"></i> <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-menu-arrow pull-right"></i>
+                            <i class="main-icon fa fa-bar-chart-o"></i> <span>Graphs</span>
+                        </a>
+                        <ul><!-- submenus -->
+                            <li><a href="graphs-flot.html">Flot Charts</a></li>
+                            <li><a href="graphs-morris.html">Morris Charts</a></li>
+                            <li><a href="graphs-inline.html">Inline Charts</a></li>
+                            <li><a href="graphs-chartjs.html">Chart.js</a></li>
                         </ul>
-                    </div>
-                    <div class="clearfix"></div>
-                </div> <!-- end sidebarinner -->
-            </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-menu-arrow pull-right"></i>
+                            <i class="main-icon fa fa-table"></i> <span>Tables</span>
+                        </a>
+                        <ul><!-- submenus -->
+                            <li><a href="tables-bootstrap.html">Bootstrap Tables</a></li>
+                            <li><a href="tables-jqgrid.html">jQuery Grid</a></li>
+                            <li><a href="tables-footable.html">jQuery Footable</a></li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-menu-arrow pull-right"></i>
+                                    Datatables
+                                </a>
+                                <ul>
+                                    <li><a href="tables-datatable-managed.html">Managed Datatables</a></li>
+                                    <li><a href="tables-datatable-editable.html">Editable Datatables</a></li>
+                                    <li><a href="tables-datatable-advanced.html">Advanced Datatables</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-menu-arrow pull-right"></i>
+                            <i class="main-icon fa fa-pencil-square-o"></i> <span>Forms</span>
+                        </a>
+                        <ul><!-- submenus -->
+                            <li><a href="form-elements.html">Smarty Elements</a></li>
+                            <li><a href="form-masked-inputs.html">Masked Inputs</a></li>
+                            <li><a href="form-pickers.html">Pickers</a></li>
+                            <li><a href="form-ui-sliders.html">UI Sliders</a></li>
+                            <li><a href="form-validation.html">Validation Form</a></li>
+                            <li><a href="form-html-editors.html">Html Editors</a></li>
+                            <li><a href="form-autosuggest.html">Autosuggest</a></li>
+                            <li><a href="form-x-editable.html">Form X-Editable</a></li>
+                            <li><a href="form-dropzone.html">Dropzone File Upload</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-menu-arrow pull-right"></i>
+                            <i class="main-icon fa fa-gears"></i> <span>UI Features</span>
+                        </a>
+                        <ul><!-- submenus -->
+                            <li><a href="ui-portlets.html">Portlets</a></li>
+                            <li><a href="ui-buttons.html">Buttons</a></li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-menu-arrow pull-right"></i>
+                                    Icons
+                                </a>
+                                <ul>
+                                    <li><a href="ui-icons-fontawsome.html">Fontawsome</a></li>
+                                    <li><a href="ui-icons-etline.html">Et-Line Icons</a></li>
+                                    <li><a href="ui-icons-glyphicons.html">Glyph Icons</a></li>
+                                    <li><a href="ui-icons-flags.html">Flags</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="ui-alerts-dialogs.html">Alerts &amp; Dialogs</a></li>
+                            <li><a href="ui-tabs-acordion-navs.html">Tabs, Acordion &amp; Navs</a></li>
+                            <li><a href="ui-knob.html">Knob Circles</a></li>
+                            <li><a href="ui-nestable.html">Nestable List</a></li>
+                            <li><a href="ui-toastr.html">Toastr Notifications</a></li>
+                            <li><a href="ui-modals.html">Modals</a></li>
+                            <li><a href="ui-grid.html">Grid</a></li>
+                            <li><a href="ui-google-maps.html">Google Maps</a></li>
+                            <li><a href="ui-vector-maps.html">Vector Maps</a></li>
+                            <li><a href="ui-essentials.html">Essentials</a></li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-menu-arrow pull-right"></i>
+                                    <i class="fa fa-folder-open"></i>
+                                    Deep Navigation
+                                </a>
+                                <!-- 3rd Level -->
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            3rd Level
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-menu-arrow pull-right"></i>
+                                            <i class="fa fa-folder-open"></i>
+                                            4rd Level
+                                        </a>
+                                        <!-- 4th Level -->
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    4th Level
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-menu-arrow pull-right"></i>
+                                                    <i class="fa fa-folder-open"></i>
+                                                    5th Level
+                                                </a>
+                                                <!-- 5th Level -->
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            5th level
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-menu-arrow pull-right"></i>
+                                                            <i class="fa fa-folder-open"></i>
+                                                            6th level
+                                                        </a>
+                                                        <!-- 6th Level -->
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">
+                                                                    6th level
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    6th level
+                                                                </a>
+                                                            </li>
+                                                        </ul><!-- /6th Level -->
+                                                    </li>
+                                                </ul><!-- /5th Level -->
+                                            </li>
+                                        </ul><!-- /4th Level -->
+                                    </li>
+                                </ul><!-- /3rd Level -->
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fa fa-menu-arrow pull-right"></i>
+                            <i class="main-icon fa fa-book"></i> <span>Pages</span>
+                        </a>
+                        <ul><!-- submenus -->
+                            <li><a href="page-invoice.html">Invoice</a></li>
+                            <li><a href="page-login.html">Login</a></li>
+                            <li><a href="page-register.html">Register</a></li>
+                            <li><a href="page-lock.html">Lock Screen</a></li>
+                            <li><a href="page-forum.html">Forum</a></li>
+                            <li><a href="page-404.html">Error 404</a></li>
+                            <li><a href="page-500.html">Error 500</a></li>
+                            <li><a href="page-pricing.html">Pricing Table</a></li>
+                            <li><a href="page-search.html">Search Result</a></li>
+                            <li><a href="page-sidebar.html">Sidebar Page</a></li>
+                            <li class="active"><a href="page-user-profile.html">User Profile</a></li>
+                            <li><a href="page-blank-1.html">Blank Page</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="calendar.html">
+                            <i class="main-icon fa fa-calendar"></i>
+                            <span class="label label-warning pull-right">2</span> <span>Calendar</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- SECOND MAIN LIST -->
+                <h3>MORE</h3>
+                <ul class="nav nav-list">
+                    <li>
+                        <a href="calendar.html">
+                            <i class="main-icon fa fa-calendar"></i>
+                            <span class="label label-warning pull-right">2</span> <span>Calendar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../HTML/start.html">
+                            <i class="main-icon fa fa-link"></i>
+                            <span class="label label-danger pull-right">PRO</span> <span>Frontend</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <span id="asidebg"><!-- aside fixed background --></span>
+        </aside>
 
 	</div>
 </template>

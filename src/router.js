@@ -56,10 +56,10 @@ import Transferreq from './views/Authentication/Transferreq.vue';
 import Portfolio from './views/Authentication/Portfolio.vue';
 import Userbuy from './views/Authentication/Userbuy.vue';
 import Usersell from './views/Authentication/Usersell.vue';
-import TradeBuy from './views/Trade/TradeBuy.vue';
-import TradeSell from './views/Trade/TradeSell.vue';
+import Tradebuy from './views/Trade/Tradebuy.vue';
+import Tradesell from './views/Trade/Tradesell.vue';
 import GetTrade from './views/Authentication/GetTrade.vue';
-import Buynsell from './views/Trade/BuynSell.vue';
+import Buynsell from './views/Trade/Buynsell.vue';
 import PropBuy from './views/Authentication/PropBuy.vue';
 import addstates from './views/Authentication/addstates.vue';
 import addlocations from './views/Authentication/addlocations.vue';
@@ -313,7 +313,7 @@ export default new Router({
       component: confirmUserEdit,
     },
     {
-      path: '/profile/:_id',
+      path: '/profile/',
       name: 'profile',
       component: Profile,
     },
@@ -360,7 +360,7 @@ export default new Router({
     {
       path: '/tradesell',
       name: 'tradesell',
-      component: TradeSell,
+      component: Tradesell,
     },
     {
       path: '/trading',
@@ -370,7 +370,7 @@ export default new Router({
     {
       path: '/tradebuy',
       name: 'tradebuy',
-      component: TradeBuy,
+      component: Tradebuy,
     },
     {
       path: '/buynsell',
@@ -389,7 +389,7 @@ export default new Router({
     },
     {
       path: '/estateleague',
-      name: 'cestateleague',
+      name: 'estateleague',
       component: EstateLeague,
     },
     {

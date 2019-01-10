@@ -50,7 +50,7 @@
 							<p>You can reach us here.</p>
 							<ul>
 								<li><i class="fa fa-location-arrow"></i></li>
-								<li><i class="fa fa-envelope-o"></i><a href="https://gmail.com/">support@teamltd.org</a></li>
+								<li><i class="fa fa-envelope-o"></i><a href="https://gmail.com/"  target="_blank">support@teamltd.org</a></li>
 								<li><i class="fa fa-phone"></i>+2348022430140</li>
 							</ul>
 						</div>

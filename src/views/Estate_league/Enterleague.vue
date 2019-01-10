@@ -65,7 +65,8 @@
 							<h2><a href="#">About League</a></h2>
 
 
-							<p style="font-size:15px;"><b>A league for REAL Champions only. Here, every player and every team is a winner. Every new transaction  on this  platform, a plot of land is WON.</b></p>
+							<p style="font-size:15px;"><b>A league for REAL Champions only. Here, every player and every team is a
+								winner. Every new transaction  on this  platform, a plot of land is WON.</b></p>
 							<h2><a href="#">Enter League</a></h2>
 							<p>Already a Winner?</p><br>
 							<div class="top-nav-login-btn ">
