@@ -1,9 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-
 import Home from './views/Home.vue';
-
 import ContactUs from './views/Contactus.vue';
 import Reg from './views/Authentication/Reg.vue';
 import Login from './views/Authentication/Login.vue';
@@ -27,6 +25,7 @@ import Sell from './views/Our_interest/Sell.vue';
 import Properties from './views/Our_interest/Properties.vue';
 import Overview from './views/Business_club/Overview.vue';
 import About from './views/Who_we_are/About.vue';
+import spa1 from './views/Who_we_are/spa1.vue';
 import Importantdate from './views/Business_club/Importantdate.vue';
 import EnterLeague from './views/Estate_league/Enterleague.vue';
 import Joinleague from './views/Estate_league/Joinleague.vue';
@@ -45,7 +44,7 @@ import Market from './views/Authentication/Market.vue';
 import Clients from './views/Authentication/Clients.vue';
 import clientEdit from './views/Edit/clientEdit.vue';
 import confirmUserEdit from './views/Edit/confirmUserEdit.vue';
-import editUserRole from './views/Authentication/editUserRole.vue';
+
 import ConfirmUser from './views/Authentication/ConfirmUser.vue';
 import Excpromo from './views/Authentication/Excpromo.vue';
 import Siteinsp from './views/Authentication/Siteinsp.vue';
@@ -57,9 +56,12 @@ import Portfolio from './views/Authentication/Portfolio.vue';
 import Userbuy from './views/Authentication/Userbuy.vue';
 import Usersell from './views/Authentication/Usersell.vue';
 import Tradebuy from './views/Trade/Tradebuy.vue';
+import AuthTradebuy from './views/Trade/AuthTradebuy.vue';
 import Tradesell from './views/Trade/Tradesell.vue';
+import AuthTradesell from './views/Trade/AuthTradesell.vue';
 import GetTrade from './views/Authentication/GetTrade.vue';
 import Buynsell from './views/Trade/Buynsell.vue';
+import AuthBuynsell from './views/Trade/AuthBuynsell.vue';
 import PropBuy from './views/Authentication/PropBuy.vue';
 import addstates from './views/Authentication/addstates.vue';
 import addlocations from './views/Authentication/addlocations.vue';
@@ -111,6 +113,13 @@ export default new Router({
       path: '/dash',
       name: 'user_dashboard',
       component: Userdashboard,
+      // beforeEnter: (to, from, next) => {
+      //   if (store.state.isUserLoggedIn) { return next('/'); }
+      //   next();
+      // },
+      meta: {
+        requiresAuth: true,
+      },
     },
 
     {
@@ -236,6 +245,9 @@ export default new Router({
       path: '/state',
       name: 'states',
       component: addstates,
+      meta: {
+        requiresAuth: true,
+      },
     },
     {
       path: '/addlocation',
@@ -297,11 +309,11 @@ export default new Router({
       name: 'clientsEdit',
       component: clientEdit,
     },
-    {
-      path: '/edit/:_id/edit',
-      name: 'editRole',
-      component: editUserRole,
-    },
+    // {
+    //   path: '/:_id/',
+    //   name: 'editRole',
+    //   component: editUserRole,
+    // },
     {
       path: '/confirm',
       name: 'confirm',
@@ -332,6 +344,7 @@ export default new Router({
       name: 'Biz__club',
       component: Bizclub,
     },
+
     {
       path: '/leaguetable',
       name: 'leaguetable',
@@ -346,6 +359,9 @@ export default new Router({
       path: '/portfolio',
       name: 'portfolio',
       component: Portfolio,
+      meta: {
+        requiresAuth: true,
+      },
     },
     {
       path: '/userbuy',
@@ -357,6 +373,12 @@ export default new Router({
       name: 'usersell',
       component: Usersell,
     },
+    {
+      path: '/authtradesell',
+      name: 'authtradesell',
+      component: AuthTradesell,
+    },
+
     {
       path: '/tradesell',
       name: 'tradesell',
@@ -373,9 +395,24 @@ export default new Router({
       component: Tradebuy,
     },
     {
+      path: '/authtradebuy',
+      name: 'authtradebuy',
+      component: AuthTradebuy,
+    },
+    {
       path: '/buynsell',
       name: 'buynsell',
       component: Buynsell,
+
+    },
+    {
+      path: '/auth/buynsell',
+      name: 'authbuynsell',
+      component: AuthBuynsell,
+      meta: {
+        requiresAuth: true,
+      },
+
     },
     {
       path: '/propbuy',
@@ -397,6 +434,12 @@ export default new Router({
       name: 'videos',
       component: Videos,
     },
+    {
+      path: '/spa1',
+      name: 'spa',
+      component: spa1,
+    },
+
 
   ],
 });

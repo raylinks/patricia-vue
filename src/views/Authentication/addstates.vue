@@ -1,10 +1,13 @@
 <template>
     <div>
 
+
+            <nav-bar v-if="this.$route.path !== '/dash'"></nav-bar>
+
         <div id="wrapper">
 
             <!-- ========== Left Sidebar Start ========== -->
-            <side-bar></side-bar>
+
             <!-- Left Sidebar End -->
 
             <!-- Start right Content here -->
@@ -59,10 +62,10 @@
                                                     <label>Slug</label>
                                                     <input type="text" class="form-control"  v-model="formData.slug"  placeholder="input state name"/>
                                                 </div>
-		<br>
-<h1 class="error" v-html="error" style="color: red;">{{error}}</h1>
+                                                <br>
+                                                <h1 class="error" v-html="error" style="color: red;">{{error}}</h1>
 
-<br>
+                                                <br>
 
                                                 <div class="form-group">
                                                     <div>
@@ -97,11 +100,12 @@
             <!-- End Right content here -->
 
         </div>
-    </div>
+        <app-footer  v-if="this.$route.path !== '/dash'"></app-footer>
+        </div>
 </template>
 <script>
-import AdminSidebar from './AdminSidebar.vue';
-import Topbar from './Topbar.vue';
+    import Navbar from '../Navbar.vue';
+    import Footer from '../Footer.vue';
 
 import { postStates } from '../../config';
 
@@ -120,10 +124,10 @@ export default{
 
     },
   }),
-  components: {
-    'side-bar': AdminSidebar,
-    'top-bar': Topbar,
-  },
+    components: {
+        'nav-bar': Navbar,
+        'app-footer': Footer,
+    },
 
   methods: {
 

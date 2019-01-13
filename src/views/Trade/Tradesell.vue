@@ -1,28 +1,75 @@
 <template>
 	<div>
 		<nav-bar></nav-bar>
-		<div class="pagehding-sec">
-			<div class="images-overlay"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<div class="page-heading">
+		<form  @submit.prevent="submit" >
+			<div id="wrapper"   v-show="seen">
 
-							<ul>
-								<li><a href="index-2.html"></a></li>
-								<h1>Trade</h1>
+				<div class="content-page">
+					<!-- Start content -->
+					<div class="content" >
+						<div class="page-content-wrapper ">
 
+							<div class="container-fluid">
 
-							</ul>
+								<div class="row">
+									<div class="col-sm-8">
+										<div class="page-title-box">
+											<div class="btn-group float-right">
+												<ol class="breadcrumb hide-phone p-0 m-0">
+													<li class="breadcrumb-item"><a href="#"T.E.A.M LTD.></a></li>
+
+												</ol>
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<!-- end page title end breadcrumb -->
+
+								<div class="row"  >
+									<div class="col-sm-9 col-lg-9 ">
+										<div class="card m-b-30">
+											<div class="card-body">
+
+												<div class="form-group row">
+													<label class="col-sm-2 col-form-label">Select product</label>
+													<div class="col-sm-10">
+														<select  v-model="reg.product"  class="form-control">
+															<option>Select</option>
+															<option value="lakoweLekki">Lekki/lakowe</option>
+
+														</select>
+													</div>
+												</div>
+												<div class="form-group row">
+													<label class="col-sm-2 col-form-label">Promo code</label>
+													<div class="col-sm-10">
+														<input   v-model="reg.promo_code"  class="form-control" type="search" >
+													</div>
+												</div>
+												<div class="form-group row">
+													<label class="col-sm-2 col-form-label">Site Inspection</label>
+													<div class="col-sm-10">
+														<input class="form-control"  v-model="reg.site_visit"  type="email"  >
+													</div>
+												</div>
+
+												<div class="col-md-4 col-sm-4 col-xs-12">
+													<div class="single-input-fieldsbtn">
+														<button class="btn btn-primary pull-right btn-submit"   @click="seen = !seen" type="submit"><i class="fa fa-search"></i> Next...</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- end col -->
+								</div> <!-- end row -->
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-
-		<form @submit.prevent="submit">
-			<section class="contact-form-sec pt-50 pb-50"   v-show="seen">
+			<section class="contact-form-sec pt-50 pb-50"  v-show="!seen">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8">
@@ -34,57 +81,6 @@
                                     <h4 class="alert-heading">Error!</h4>
                                     <p class="mb-0">{{error}}</p>
                                 </div> -->
-
-
-								<h2>FILL</h2>
-								<div class="col-md-4 col-sm-4 col-xs-12">
-									<div class="single-input-field">
-										<h4>(step 1) select Product </h4>
-
-										<select  v-model="reg.product" type="text">
-
-											<option value="lakowe">Lakowe/Lekki</option>
-										</select>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-4 col-xs-12">
-									<div class="single-input-field">
-										<h4>(step  2)input promo code(optional </h4>
-										<select  v-model="reg.promo_code" >
-											<option value="yeankhar">YEANKHAR</option>
-
-										</select>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-4 col-xs-12">
-									<div class="single-input-field">
-										<h4>inspection date<span style="color:red;"> *</span></h4>
-										<input v-model="reg.site_visit" type="date"/>
-									</div>
-								</div>
-
-
-								<div class="col-md-4 col-sm-4 col-xs-12">
-									<div class="single-input-fieldsbtn">
-										<button class="btn btn-primary pull-right btn-submit"   @click="seen = !seen" type="submit"><i class="fa fa-search"></i> Next...</button>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-					<!-- Google Map Section Start -->
-
-					<!-- Google Map Section End -->
-				</div>
-			</section>
-
-
-			<section class="contact-form-sec pt-50 pb-50"  v-show="!seen">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8">
-							<div class="contact-field">
 								<div class="row">
 									<div class="alert alert-success" v-if="submitted">
 										<button class="close" type="button" data-dismiss="alert" aria-hidden="true">&#215;</button>
@@ -92,68 +88,52 @@
 									</div>
 								</div>
 
-								<h2>Referral Details  && Prospective buyer details</h2>
+								<h2>Input your Details</h2>
 								<div class="col-md-4 col-sm-4 col-xs-12">
 									<div class="single-input-field">
-										<h4>Your name (required) </h4>
-										<input type="text"  v-model="reg.refelname"/>
+										<h4>Firstname (required) </h4>
+										<input v-model="reg.firstname" type="text"/>
 									</div>
 								</div>
 								<div class="col-md-4 col-sm-4 col-xs-12">
 									<div class="single-input-field">
-										<h4>Your Email *</h4>
-										<input type="email"  v-model="reg.refelemail"/>
+										<h4>Lastname (required) </h4>
+										<input v-model="reg.lastname" type="text"/>
 									</div>
 								</div>
 								<div class="col-md-4 col-sm-4 col-xs-12">
 									<div class="single-input-field">
-										<h4> Your Phone</h4>
-										<input   v-model="reg.refelphone" type="text"/>
+										<h4>Your Email<span style="color:red;"> *</span></h4>
+										<input v-model="reg.email" type="email"/>
 									</div>
 								</div>
-<br><br><br><hr><hr><hr>
+								<div class="col-md-4 col-sm-4 col-xs-12">
+									<div class="single-input-field">
+										<h4>Password (required) </h4>
+										<input v-model="reg.password" placeholder="password" type="password"/>
 
+									</div>
+								</div>
 								<div class="col-md-4 col-sm-4 col-xs-12">
+									<div class="single-input-field">
+										<h4> Confirm Password (required) </h4>
+										<input v-model="reg.pasword_confirmation" placeholder="password" type="password"/>
 
-									<div class="single-input-field">
-										<h4> Prospective Firstname</h4>
-										<input type="text"  v-model="reg.firstname"/>
 									</div>
 								</div>
-								<div class="col-md-4 col-sm-4 col-xs-12">
-									<div class="single-input-field">
-										<h4>  Prospective Lastname *</h4>
-										<input type="text" v-model="reg.lastname"/>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-4 col-xs-12">
-									<div class="single-input-field">
-										<h4>  Prospective Email</h4>
-										<input type="email" v-model="reg.email"/>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-4 col-xs-12">
-									<div class="single-input-field">
-										<h4>Password </h4>
-										<input type="password" v-model="reg.password"/>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-4 col-xs-12">
-									<div class="single-input-field">
-										<h4>Confirm Password *</h4>
-										<input type="password"  v-model="reg.pasword_confirmation"/>
-									</div>
-								</div>
+
 								<div class="col-md-4 col-sm-4 col-xs-12">
 									<div class="single-input-field">
 										<h4>Mobile number</h4>
-										<input type="text" v-model="reg.phone"/>
+										<input v-model="reg.phone" type="text"/>
 									</div>
 								</div>
-								<br>
-								<h1 class="error" v-html="error" style="color: red;">{{error}}</h1>
 
 								<br>
+								<p class="error" v-html="error" style="color: red;">{{error}}</p>
+
+								<br>
+
 
 								<div class="col-md-4 col-sm-4 col-xs-12">
 									<div class="single-input-fieldsbtn">
@@ -188,7 +168,6 @@
 			</section>
 
 		</form>
-
 
 		<app-footer></app-footer>
 

@@ -1,10 +1,11 @@
 <template>
 <div>
+    <nav-bar v-if="this.$route.path !== '/dash'"></nav-bar>
         <!-- Begin page -->
         <div id="wrapper">
 
             <!-- ========== Left Sidebar Start ========== -->
-           <side-bar></side-bar>
+
             <!-- Left Sidebar End -->
 
             <!-- Start right Content here -->
@@ -44,11 +45,12 @@
             </div>
             <!-- End Right content here -->
         </div>
+
 </div>
 </template>
 <script>
-import AdminSidebar from './AdminSidebar.vue';
-import Topbar from './Topbar.vue';
+    import Navbar from '../Navbar.vue';
+    import Footer from '../Footer.vue';
 
 export default{
   data() {
@@ -62,8 +64,8 @@ export default{
   },
 
   components: {
-    'side-bar': AdminSidebar,
-    'top-bar': Topbar,
+      'nav-bar': Navbar,
+      'app-footer': Footer,
   },
   created() {
     this.getUsers();

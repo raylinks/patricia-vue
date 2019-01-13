@@ -1,5 +1,5 @@
 <template>
- <div id="app">
+ <div >
      <!-- <nav-bar v-if="this.$route.path !== '/dash'"></nav-bar>   -->
     <router-view/>
     <!--  <app-footer  v-if="this.$route.path !== '/dash'"></app-footer> -->

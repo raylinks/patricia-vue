@@ -22,4 +22,6 @@ export const postTradeSellers = `${apiDomain}api/v1/users/createtradesell`;
 export const getTradeBuyer = `${apiDomain}api/v1/users/tradebuyers`;
 export const gettradesellers = `${apiDomain}api/v1/users/tradesellers`;
 export const PostContact = `${apiDomain}api/v1/users/contact`;
+export const AuthLandBuy = `${apiDomain}api/v1/land/authcreatebuy`;
+export const AuthLandSell = `${apiDomain}api/v1/land/authcreatesell`;
 export const postStates = `${apiDomain}api/v1/state`;

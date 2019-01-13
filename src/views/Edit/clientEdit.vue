@@ -1,9 +1,10 @@
 <template>
     <div>
+        <nav-bar v-if="this.$route.path !== '/dash'"></nav-bar>
         <div id="wrapper">
 
             <!-- ========== Left Sidebar Start ========== -->
-            <side-bar></side-bar>
+
             <!-- Left Sidebar End -->
 
             <!-- Start right Content here -->
@@ -13,7 +14,7 @@
                 <div class="content">
 
                     <!-- Top Bar Start -->
-                    <top-bar></top-bar>
+
                     <!-- Top Bar End -->
 
                     <div class="page-content-wrapper ">
@@ -89,19 +90,18 @@
 
                 </div> <!-- content -->
 
-                <footer class="footer">
-                    © 2018 Annex by Mannatthemes.
-                </footer>
+
 
             </div>
             <!-- End Right content here -->
 
         </div>
+        <app-footer  v-if="this.$route.path !== '/dash'"></app-footer>
     </div>
 </template>
 <script>
-import AdminSidebar from '../Authentication/AdminSidebar.vue';
-import Topbar from '../Authentication/Topbar.vue';
+    import Navbar from '../Navbar.vue';
+    import Footer from '../Footer.vue';
 
 import { confirmUser } from '../../config';
 
@@ -117,8 +117,8 @@ export default{
     });
   },
   components: {
-    'side-bar': AdminSidebar,
-    'top-bar': Topbar,
+      'nav-bar': Navbar,
+      'app-footer': Footer,
   },
 };
 </script>

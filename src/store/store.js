@@ -3,6 +3,8 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
+
+
 export default new Vuex.Store({
   strict: true,
   state: {
@@ -11,11 +13,11 @@ export default new Vuex.Store({
       isUserLoggedIn: false,
       
   },
-  getters:{
-    isAdmin: state=> state.user,
-    isUser: state=> state.user
-
-  },
+  // getters:{
+  //   isAdmin: state=> state.user,
+  //   isUser: state=> state.user
+  //
+  // },
   mutations: {
     setToken(state, token) {
       state.token = token

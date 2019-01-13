@@ -1,164 +1,171 @@
 <template>
     <div>
 
-        <side-bar></side-bar>
-        <top-bar></top-bar>
-        <section id="middle">
 
+        <nav-bar v-if="this.$route.path !== '/dash'"></nav-bar>
 
-            <!-- page title -->
-            <header id="page-header">
-                <h1>Form Validate</h1>
-                <ol class="breadcrumb">
-                    <li><a href="#">Forms</a></li>
-                    <li class="active">Form Validate</li>
-                </ol>
-            </header>
-            <!-- /page title -->
+        <div id="wrapper">
 
+            <!-- ========== Left Sidebar Start ========== -->
+            <!--<side-bar></side-bar>-->
+            <!-- Left Sidebar End -->
 
-            <div id="content" class="padding-20">
+            <!-- Start right Content here -->
 
-                <div class="row">
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
 
-                    <div class="col-md-6">
+                    <!-- Top Bar Start -->
+                    <!--<top-bar></top-bar>-->
+                    <!-- Top Bar End -->
 
-                        <!-- ------ -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading panel-heading-transparent">
-                                <strong>FORM VALIDATION</strong>
-                            </div>
+                    <div class="page-content-wrapper ">
 
-                            <div class="panel-body">
+                        <div class="container-fluid">
 
-                                <form class="validate" action="php/contact.php" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
-                                    <fieldset>
-                                        <!-- required [php action request] -->
-                                        <input type="hidden" name="action" value="contact_send" />
-
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <div class="col-md-6 col-sm-6">
-                                                    <label>First Name *</label>
-                                                    <input type="text" name="contact[first_name]" value="" class="form-control required">
-                                                </div>
-                                                <div class="col-md-6 col-sm-6">
-                                                    <label>Last Name *</label>
-                                                    <input type="text" name="contact[last_name]" value="" class="form-control required">
-                                                </div>
-                                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="page-title-box">
+                                        <div class="btn-group float-right">
+                                            <ol class="breadcrumb hide-phone p-0 m-0">
+                                                <li class="breadcrumb-item"><a href="#">Annex</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                                                <li class="breadcrumb-item active">Form Validation</li>
+                                            </ol>
                                         </div>
-
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <div class="col-md-6 col-sm-6">
-                                                    <label>Email *</label>
-                                                    <input type="email" name="contact[email]" value="" class="form-control required">
-                                                </div>
-                                                <div class="col-md-6 col-sm-6">
-                                                    <label>Phone *</label>
-                                                    <input type="text" name="contact[phone]" value="" class="form-control required">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <div class="col-md-12 col-sm-12">
-                                                    <label>Position *</label>
-                                                    <select name="contact[position]" class="form-control pointer required">
-                                                        <option value="">--- Select ---</option>
-                                                        <option value="Marketing">PR &amp; Marketing</option>
-                                                        <option value="Developer">Web Developer</option>
-                                                        <option value="php">PHP Programmer</option>
-                                                        <option value="Javascript">Javascript Programmer</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <div class="col-md-6 col-sm-6">
-                                                    <label>Expected Salary *</label>
-                                                    <input type="text" name="contact[expected_salary]" value="" class="form-control required">
-                                                </div>
-                                                <div class="col-md-6 col-sm-6">
-                                                    <label>Start Date *</label>
-                                                    <input type="text" name="contact[start_date]" value="" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <div class="col-md-12 col-sm-12">
-                                                    <label>Experience *</label>
-                                                    <textarea name="contact[experience]" rows="4" class="form-control required"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <div class="col-md-12 col-sm-12">
-                                                    <label>
-                                                        Website
-                                                        <small class="text-muted">- optional</small>
-                                                    </label>
-                                                    <input type="text" name="contact[website]" placeholder="http://" class="form-control">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <div class="col-md-12">
-                                                    <label>
-                                                        File Attachment
-                                                        <small class="text-muted">Curriculum Vitae - optional</small>
-                                                    </label>
-
-                                                    <!-- custom file upload -->
-                                                    <div class="fancy-file-upload fancy-file-primary">
-                                                        <i class="fa fa-upload"></i>
-                                                        <input type="file" class="form-control" name="contact[attachment]" onchange="jQuery(this).next('input').val(this.value);" />
-                                                        <input type="text" class="form-control" placeholder="no file selected" readonly="" />
-                                                        <span class="button">Choose File</span>
-                                                    </div>
-                                                    <small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </fieldset>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <button type="submit" class="btn btn-3d btn-teal btn-xlg btn-block margin-top-30">
-                                                SEND APPLICATION
-                                                <span class="block font-lato">We'll get back to you within 48 hours</span>
-                                            </button>
-                                        </div>
+                                        <h4  style="color:red;" class="page-title">Estate development series</h4>
                                     </div>
-
-                                </form>
-
+                                </div>
                             </div>
+                            <!-- end page title end breadcrumb -->
 
-                        </div>
-                        <!-- /----- -->
+                            <div class="col-lg-6">
+                                <div class="card m-b-30">
+                                    <div class="card-body">
 
-                    </div>
-                </div>
+                                        <h4 class="mt-0 header-title">ADD LOCATION DETAILS</h4>
+                                        <p class="text-muted m-b-30 font-14">Admin panel to to add necedssary info,,note whatever you input here will be showed on the website..</p>
+                                        <div class="row">
+                                            <div class="alert alert-success" v-if="submitted">
+                                                <button class="close" type="button" data-dismiss="alert" aria-hidden="true">&#215;</button>
+                                                You have succesfully added a location......An email has been sent to you
+                                            </div>
+                                        </div>
+                                        <form @submit.prevent="submit" id="locate" enctype="multipart/form-data">
+
+                                            <div class="form-group">
+                                                <label>Select State</label>
+                                                <select class="form-control" name="state" v-model="formData.state">
+                                                    <option  value="0" >Select  state</option>
+                                                    <option v-for="cat in show"  v-bind:value="cat.slug">{{cat.state}}</option>
+
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>State slug</label>
+                                                <div>
+                                                    <input type="text" name="slug" v-model="formData.slug" class="form-control"
+                                                           data-parsley-min="6" placeholder="Min value is 6"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Location Name</label>
+                                                <div>
+                                                    <input type="text" name="name"  v-model="formData.name" class="form-control"
+                                                           data-parsley-maxlength="6" placeholder="Max 6 chars."/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Developer</label>
+                                                <div>
+                                                    <input type="text" name="deveoper" v-model="formData.developer" class="form-control"
+                                                           data-parsley-length="[5,10]"
+                                                           placeholder="Text between 5 - 10 chars length"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>plot Size</label>
+                                                <div>
+                                                    <input type="text" name="plot_size" v-model="formData.plot_size" class="form-control"
+                                                           data-parsley-min="6" placeholder="Min value is 6"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Amount</label>
+                                                <div>
+                                                    <input type="text" name="amount" v-model="formData.amount" class="form-control"
+                                                           data-parsley-max="6" placeholder="Max value is 6"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Bonus</label>
+                                                <div>
+                                                    <input class="form-control" name="bonus" v-model="formData.bonus"   type="text range" min="6"
+                                                           max="100" placeholder="Number between 6 - 100"/>
+                                                </div>
+                                            </div>
+
+                                            <div v-if="message"  :class="`message ${error ? 'is-danger' : 'is-success'}`">
+                                                <div  class="message-body">{{message}}</div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Upload Image</label>
+                                                <div>
+                                                    <input type="file" name="image"  ref="file" class="form-control" @change="imageChanged"
+
+                                                           placeholder="Hex. Color" />
+                                                </div>
+                                            </div>
+
+                                            <span v-if="file" class="file-name" >{{file.name}}</span>
+
+
+
+
+
+                                            <br>
+                                            <h1 class="error" v-html="error" style="color: red;">{{error}}</h1>
+
+                                            <br>
+
+
+
+
+                                            <div class="form-group m-b-0">
+                                                <div>
+                                                    <button type="submit" class="btn btn-primary waves-effect waves-light">
+                                                        Submit
+                                                    </button>
+                                                    <button type="reset" class="btn btn-secondary waves-effect m-l-5">
+                                                        Cancel
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div><!-- container -->
+
+                    </div> <!-- Page content Wrapper -->
+
+                </div> <!-- content -->
+
+
+
             </div>
-        </section>
+            <!-- End Right content here -->
+
+        </div>
+
     </div>
 </template>
 <script>
-    import AdminSidebar from './AdminSidebar.vue';
-    import Topbar from './Topbar.vue';
+    import Navbar from '../Navbar.vue';
+    import Footer from '../Footer.vue';
     import axios from 'axios';
     import { postLocation } from '../../config';
     import { fetchStates } from '../../config';
@@ -197,9 +204,8 @@
             });
         },
         components: {
-            'side-bar': AdminSidebar,
-            'top-bar': Topbar,
-
+            'nav-bar': Navbar,
+            'app-footer': Footer,
         },
         methods: {
             imageChanged(e){

@@ -2,7 +2,7 @@
   <div >
 
   	<nav-bar v-if="this.$route.path !== '/dash'"></nav-bar>
-    <div class="slider">
+    <div  v-if="!$store.state.isUserLoggedIn" class="slider">
 		<div class="all-slide owl-item">
 			<div class="single-slide" style="background-image:url(img/slide1.jpg);">
 				<div class="slider-overlay"></div>

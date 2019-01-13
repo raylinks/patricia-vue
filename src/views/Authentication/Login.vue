@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<nav-bar v-if="this.$route.path !== '/dash'"></nav-bar>
 		<div >
 			<div class="modal-dialog modal-sm">
 				<div class="modal-content login-modal">
@@ -24,47 +25,14 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-3"></div>
-                  <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="form-card">
-                        <center><span style="font-size: 30px;">Login</span></center>
-                        <br>
-                        <div class="row">
-                                <form @submit.prevent="login">
-
-                                        <div class="form-group">
-
-                                            <div class="form-group">
-                                                <input type="email" class="form-control" required  v-model="email" name="email" placeholder="Email">
-                                            </div>
-
-
-                                            <div class="form-group">
-                                                <input type="password"  name="password" class="form-control" id="" placeholder="password" v-model="password">
-
-                                            </div>
-                                            <button type="submit" class="btn btn-submit-blue pull-right">Login</button>
-                                        <div class="">
-                                            <ul  class="form-card-links list-inline">
-                                            <li><a href="/#/forgetpassword">FORGET PASSWORD</a></li>
-                                            </ul>
-                                        </div>
-                                        </div>
-                                    </form>
-                                </div>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-3"></div>
-              </div>
-        </div> -->
+		<app-footer  v-if="this.$route.path !== '/dash'"></app-footer>
 	</div>
 </template>
 <script >
 import AuthenticationService from '@/services/AuthenticationService';
 import axios from 'axios';
+import Navbar from '../Navbar.vue';
+import Footer from '../Footer.vue';
 
 export default{
   data() {
@@ -74,6 +42,10 @@ export default{
       error: null,
     };
   },
+    components: {
+        'nav-bar': Navbar,
+        'app-footer': Footer,
+    },
   methods: {
     async login() {
       try {
@@ -92,3 +64,53 @@ export default{
   },
 };
 </script>
+<style scoped>
+	.nomargin 			{ margin:0 !important; 			}
+	section.page-header .breadcrumb a:hover  {
+		color: #8ab933 !important;
+		text-decoration:none;
+	}
+	.sky-form .toggle i:before {
+		background-color: #8ab933;
+	}
+	.sky-form .button {
+		background-color: #8ab933;
+	}
+
+
+	/**/
+	/* checked state */
+	/**/
+
+	.sky-form.boxed {
+		background-color:#fff;
+	}
+	.sky-form fieldset {
+		padding: 0 0 30px 0;
+	}
+
+
+
+	section.alternate .sky-form.boxed {
+		background-color:#F9F9F9;
+	}
+
+	section.dark .sky-form.boxed {
+		background-color:#333;
+		border:0;
+	}
+
+	.sky-form.boxed fieldset{padding:15px}
+	.sky-form.boxed{border:rgba(0,0,0,.1) solid}
+
+
+
+
+	.sky-form.boxed {
+		background-color:#fff;
+	}
+	.sky-form fieldset {
+		padding: 0 0 30px 0;
+	}
+
+</style>

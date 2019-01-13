@@ -45,14 +45,14 @@
           <div class="menu">
             <nav id="main-menu" class="main-menu">
               <ul>
-                <li class="active"><a href="/">Home</a></li>
-                  <li><a href="/#">Who we are<i class="fa fa-caret-down"></i></a>
+                <li v-if="!$store.state.isUserLoggedIn" class="active"><a href="/">Home</a></li>
+                  <li v-if="!$store.state.isUserLoggedIn"><a href="/#">Who we are<i class="fa fa-caret-down"></i></a>
                       <ul>
                           <li><a href="/about">About us</a></li>
 
                       </ul>
                   </li>
-                <li><a href="/#">What we do<i class="fa fa-caret-down"></i></a>
+                <li v-if="!$store.state.isUserLoggedIn"><a href="/#">What we do<i class="fa fa-caret-down"></i></a>
                     <ul>
                     <li><a href="/estate">Estate development</a></li>
                     <li><a href="/archline">ArchLine</a></li>
@@ -67,13 +67,13 @@
                     <li><a href="/#/dates">Important Dates</a></li>
                   </ul>
                 </li>-->
-                <li><a href="/estateleague">Estate League<i class="fa fa-caret-down"></i></a>
+                <li v-if="!$store.state.isUserLoggedIn"><a href="/estateleague">Estate League<i class="fa fa-caret-down"></i></a>
                   <!--<ul>
                     <li><a href="/#/enterleague">Enter League</a></li>
 
                   </ul>-->
                 </li>
-                <li><a href="/#">Inspect Site</a>
+                <li v-if="!$store.state.isUserLoggedIn"><a href="/#">Inspect Site</a>
                     <ul>
                         <li><a href="/">Videos /images</a></li>
 
@@ -82,8 +82,37 @@
                   </ul>
                 </li>
 
-                <li><a href="/contact">Find Us</a></li>
+                <li v-if="!$store.state.isUserLoggedIn"><a href="/contact">Find Us</a>
+                </li>
+
+
+                  <li v-if="$store.state.isUserLoggedIn">
+                      <a href="">Dashboard</a>
+                      <ul>
+                          <li><a href="/">Videos /images</a></li>
+
+                          <li ><a href="/market">Market</a></li>
+                          <li><a href="/promo">Promo</a></li>
+                          <li><a href="/siteinsp">Site Insp</a></li>
+                          <li><a href="/portfolio">Portfolio</a></li>
+                          <li ><a href="/bizclub">Bizclub</a></li>
+                          <li><a href="/leaguetable">League Table</a></li>
+                          <li><a href="/transferreq">Transfer Req</a></li>
+                      </ul>
+                  </li>
+                  <li v-if="$store.state.isUserLoggedIn">
+                      <a href="">Admin</a>
+                      <ul>
+                          <li><a href="/state">Add State</a></li>
+                          <li><a href="/addlocation">Add Location</a></li>
+                          <li><a href="/admindev">All Devs</a></li>
+                          <li><a href="/role">User Role</a></li>
+                          <li><a href="/clients">Clients</a></li>
+                          <li><a href="/confirm">Confirm User</a></li>
+                      </ul>
+                  </li>
               </ul>
+
             </nav>
           </div>
         </div>

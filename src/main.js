@@ -15,6 +15,18 @@ Vue.use(Auth);
 
 sync(store, router);
 
+//
+// router.beforeEach((to, from, next) => {
+//     if (to.matched.some(record => record.meta.requiresAuth)) {
+//         if (!store.state.isUserLoggedIn) {
+//             next();
+//             return;
+//         }
+//         next('/dash');
+//     } else {
+//         next();
+//     }
+// });
 
 // router.beforeEach((to, from, next) => {
 //   if (to.matched.some(record => record.meta.requiresAuth)) {

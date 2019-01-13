@@ -1,96 +1,78 @@
 <template>
-<div>
-        <!-- Begin page -->
-        <div id="wrapper">
+	<div>
+		<nav-bar></nav-bar>
 
-            <!-- ========== Left Sidebar Start ========== -->
-           <side-bar></side-bar>
-            <!-- Left Sidebar End -->
+			<div id="wrapper"   >
 
-            <!-- Start right Content here -->
+				<div class="content-page">
+					<!-- Start content -->
+					<div class="content" >
+						<div class="page-content-wrapper ">
 
-            <div class="content-page">
-                <!-- Start content -->
-                <div class="content">
+							<div class="container-fluid">
 
-                    <!-- Top Bar Start -->
-                    <top-bar></top-bar>
-                    <!-- Top Bar End -->
+								<div class="row">
+									<div class="col-sm-8">
+										<div class="page-title-box">
+											<div class="btn-group float-right">
+												<ol class="breadcrumb hide-phone p-0 m-0">
+													<li class="breadcrumb-item"><a href="#"T.E.A.M LTD.></a></li>
 
-                    <div class="page-content-wrapper ">
+												</ol>
+											</div>
 
-                        <div class="container-fluid">
+										</div>
+									</div>
+								</div>
+								<!-- end page title end breadcrumb -->
+								<h4 class="page-title"  style="color:red;">You are not licensed to the full benefits of your portal until you have patronize us</h4>
 
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="page-title-box">
-                                        <div class="btn-group float-right">
-                                            <ol class="breadcrumb hide-phone p-0 m-0">
-                                                <li class="breadcrumb-item"><a href="#">Annex</a></li>
-                                                <li class="breadcrumb-item active">Dashboard</li>
-                                            </ol>
-                                        </div>
-                                        <h4 class="page-title"  style="color:red;">You are not licensed to the full benefits of your portal until you have patronize us</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end page title end breadcrumb -->
+								<div class="row"  >
+									<div class="col-sm-9 col-lg-9 ">
+										<div class="card m-b-30">
+											<div class="card-body">
+												<form  @submit.prevent="submit" >
+												<div class="form-group row">
+													<label class="col-sm-2 col-form-label">Payment</label>
+													<div class="col-sm-10">
+														<input   v-model="users.payment"  class="form-control" type="search" >
+													</div>
+												</div>
+												<div class="form-group row">
+													<label class="col-sm-2 col-form-label">Site Allocation</label>
+													<div class="col-sm-10">
+														<input class="form-control"  v-model="users.allocation"  type="email"  >
+													</div>
+												</div>
+													<div class="form-group row">
+														<label class="col-sm-2 col-form-label">Bonus</label>
+														<div class="col-sm-10">
+															<input   v-model="users.bonus"  class="form-control" type="search" >
+														</div>
+													</div>
 
-                            <section class="contact-form-sec pt-50 pb-50">
+												<div class="col-md-4 col-sm-4 col-xs-12">
+													<div class="single-input-fieldsbtn">
+														<button class="btn btn-primary pull-right btn-submit"   type="submit"><i class="fa fa-search"></i> Submit..</button>
+													</div>
+												</div>
+												</form>
+											</div>
 
-
-			<div class="row">
-				<form @prevent.submit="submit" >
-				<div class="col-md-8">
-					<div class="contact-field">
-						<h2>second phase</h2>
-						<div class="col-md-4 col-sm-4 col-xs-12">
-							<div class="single-input-field">
-								<h4>Payment </h4>
-								<input  v-model="users.payment" type="text"/>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-12">
-							<div class="single-input-field">
-								<h4>Bonus *</h4>
-								<input v-model="users.bonus" type="email"/>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-12">
-							<div class="single-input-field">
-								<h4>Allocation Date</h4>
-								<input v-model="users.allocation"  type="text"/>
-							</div>
-						</div>
-
-						<div class="col-md-4 col-sm-4 col-xs-12">
-							<div class="single-input-fieldsbtn">
-								<input type="submit" value="submit "/>
+										</div>
+									</div> <!-- end col -->
+								</div> <!-- end row -->
 							</div>
 						</div>
 					</div>
 				</div>
-				</form>
-
 			</div>
-			<!-- Google Map Section Start -->
 
-			<!-- Google Map Section End -->
-
-	</section>
-
-
-                        </div><!-- container -->
-                    </div> <!-- Page content Wrapper -->
-                </div> <!-- content -->
-            </div>
-            <!-- End Right content here -->
-        </div>
-    </div>
+	</div>
 </template>
 <script>
-import AdminSidebar from './AdminSidebar.vue';
-import Topbar from './Topbar.vue';
+    import Navbar from '../Navbar.vue';
+    import Footer from '../Footer.vue';
 import { unLicensed } from '../../config';
 
 export default{
@@ -101,21 +83,19 @@ export default{
         bonus: '',
         allocation: '',
       },
-      show: {},
+
     };
   },
 
   components: {
-    'side-bar': AdminSidebar,
-    'top-bar': Topbar,
+      'nav-bar': Navbar,
+      'app-footer': Footer,
   },
-  created() {
-    this.getUsers();
-  },
+
   methods: {
     	submit() {
     		this.$http.post(unLicensed, this.users).then(function (response) {
-    			this.users;
+
     		});
     	},
   },
