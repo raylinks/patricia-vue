@@ -178,7 +178,7 @@ import Navbar from '../Navbar.vue';
 import Footer from '../Footer.vue';
 
 
-import { postTradeBuyers } from '../../config';
+import { postTradeSellers } from '../../config';
 
 export default{
   name: 'tradebuy',
@@ -210,7 +210,7 @@ export default{
 
   methods: {
     submit() {
-      this.$http.post('https://teamltd.org/api/v1/createtradesell', this.reg)
+      this.$http.post(postTradeSellers, this.reg)
         .then(function (response) {
           this.submitted = true;
           this.reg = '';

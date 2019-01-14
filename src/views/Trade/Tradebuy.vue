@@ -209,7 +209,7 @@ export default{
 
   methods: {
     submit() {
-      this.$http.post('https://teamltd.org/api/v1/createtradebuy', this.reg)
+      this.$http.post(postTradeBuyers, this.reg)
         .then(function (response) {
           this.submitted = true;
           this.reg = '';
