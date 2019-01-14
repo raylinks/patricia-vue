@@ -44,13 +44,13 @@
 											<div class="form-group row">
 												<label class="col-sm-2 col-form-label">Promo code</label>
 												<div class="col-sm-10">
-													<input   v-model="reg.promo_code"  class="form-control" type="search" >
+													<input   v-model="reg.promo_code"  class="form-control" type="text" >
 												</div>
 											</div>
 											<div class="form-group row">
 												<label class="col-sm-2 col-form-label">Site Inspection</label>
 												<div class="col-sm-10">
-													<input class="form-control"  v-model="reg.site_visit"  type="email"  >
+													<input class="form-control"  v-model="reg.site_visit"  type="date"  >
 												</div>
 											</div>
 
