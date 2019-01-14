@@ -1,4 +1,4 @@
-export const apiDomain = 'https://teamltd.org/';
+export const apiDomain = 'http://teamltd.org/';
 export const forgotpassword = `${apiDomain}api/v1/users/forget`;
 export const resetpassword = `${apiDomain}api/v1/users/reset`;
 export const login = `${apiDomain}api/v1/users/login`;
